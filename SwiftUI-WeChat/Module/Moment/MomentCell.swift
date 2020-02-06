@@ -12,12 +12,23 @@ import VideoPlayer
 struct MomentCell: View {
     let moment: Moment
     
+    /// 这个方案 解决了多年我对SwiftUI中只能使用强制解包的一点看法 总算是一种方案
+    fileprivate func makeMomentText() -> TextContent? {
+        if let text = moment.text {
+            return TextContent(text: text)
+        }
+        
+        return nil
+    }
+    
     var body: some View {
         HStack(alignment: .top, spacing: 12) {
             Avatar(icon: moment.author.icon)
             
             VStack(alignment: .leading, spacing: 10) {
                 Name(name: moment.author.name)
+                
+                makeMomentText()
                 
                 if moment.text != nil {
                     TextContent(text: moment.text!)
