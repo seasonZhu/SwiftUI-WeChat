@@ -23,8 +23,9 @@ struct MeView : View {
                     Line()
                 }
                 Group {
-                    Cell(icon: "me_favorite", title: "收藏")
-                    Separator().padding(.leading, 52)
+//                    Cell(icon: "me_favorite", title: "收藏")
+//                    Separator().padding(.leading, 52)
+                    LineCell(icon: "me_favorite", title: "收藏", hasLine: true)
                     Cell(icon: "me_photo_album", title: "相册")
                     Separator().padding(.leading, 52)
                     Cell(icon: "me_bank_card", title: "卡包")
@@ -124,5 +125,32 @@ private struct Line: View {
         Rectangle()
             .foregroundColor(Color("light_gray"))
             .frame(height: 8)
+    }
+}
+
+private struct LineCell: View {
+    let icon: String
+    let title: String
+    let hasLine: Bool
+    
+    var body: some View {
+        VStack(spacing: 0) {
+            HStack(spacing: 12) {
+                Image(icon)
+                
+                Text(title)
+                    .font(.system(size: 16))
+                
+                Spacer()
+                
+                Image("cell_detail_indicator")
+            }
+            .padding()
+            
+            if hasLine {
+                Separator().padding(.leading, 52)
+            }
+        }
+        .frame(height: 54)
     }
 }

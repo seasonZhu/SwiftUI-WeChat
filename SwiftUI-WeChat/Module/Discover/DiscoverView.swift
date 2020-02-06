@@ -12,6 +12,7 @@ struct DiscoverView : View {
     var body: some View {
         ScrollView {
             VStack(spacing: 0) {
+                MyFriendView()
                 Group {
                     NavigationLink(destination: MomentView()) {
                         Cell(icon: "discover_moment", title: "朋友圈")
@@ -97,5 +98,17 @@ private struct Line: View {
         Rectangle()
             .foregroundColor(Color("light_gray"))
             .frame(height: 8)
+    }
+}
+
+struct MyFriendView: View {
+    var body: some View {
+        Group {
+            Section(header: Line(), footer: Line()) {
+                NavigationLink(destination: MomentView()) {
+                    Cell(icon: "discover_moment", title: "朋友圈")
+                }
+            }
+        }
     }
 }

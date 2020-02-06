@@ -221,6 +221,22 @@ private struct Likes: View {
         
         return text
     }
+    
+    func makeFavour() -> Text {
+        var text = Text("    ")
+        
+        if likes.count == 1 {
+            text = text + Text(likes.first!)
+                .font(.system(size: 14, weight: .medium))
+                .foregroundColor(Color("link"))
+        }
+        
+        text = text + Text(likes.joined(separator: ", "))
+            .font(.system(size: 14, weight: .medium))
+            .foregroundColor(Color("link"))
+
+        return text
+    }
 }
 
 private struct Comments: View {
