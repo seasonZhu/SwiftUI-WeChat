@@ -18,24 +18,34 @@ struct MeView : View {
                     Header(member: me)
                     Line()
                 }
-                Group {
-                    Cell(icon: "me_pay", title: "支付")
-                    Line()
-                }
-                Group {
-//                    Cell(icon: "me_favorite", title: "收藏")
+//                Group {
+//                    Cell(icon: "me_pay", title: "支付")
+//                    Line()
+//                }
+//                Group {
+////                    Cell(icon: "me_favorite", title: "收藏")
+////                    Separator().padding(.leading, 52)
+//                    LineCell(icon: "me_favorite", title: "收藏", hasLine: true)
+//                    Cell(icon: "me_photo_album", title: "相册")
 //                    Separator().padding(.leading, 52)
-                    LineCell(icon: "me_favorite", title: "收藏", hasLine: true)
-                    Cell(icon: "me_photo_album", title: "相册")
-                    Separator().padding(.leading, 52)
-                    Cell(icon: "me_bank_card", title: "卡包")
-                    Separator().padding(.leading, 52)
-                    Cell(icon: "me_emoji", title: "表情")
-                    Line()
-                }
-                Group {
-                    Cell(icon: "me_setting", title: "设置")
-                    Line()
+//                    Cell(icon: "me_bank_card", title: "卡包")
+//                    Separator().padding(.leading, 52)
+//                    Cell(icon: "me_emoji", title: "表情")
+//                    Line()
+//                }
+//                Group {
+//                    Cell(icon: "me_setting", title: "设置")
+//                    Line()
+//                }
+                
+                ForEach(DataSource.meDataSource) { (dataSources) in
+                    Section(footer: Line()) {
+                        ForEach(dataSources) { (data)in
+                            Group {
+                                MeCell(data: data)
+                            }
+                        }
+                    }
                 }
             }
             .background(Color("cell"))
@@ -153,4 +163,66 @@ private struct LineCell: View {
         }
         .frame(height: 54)
     }
+}
+
+private struct MeCell: View {
+    let data: DataSource
+    
+    var body: some View {
+        VStack(spacing: 0) {
+            HStack(spacing: 12) {
+                Image(data.icon)
+                
+                Text(data.title)
+                    .font(.system(size: 16))
+                
+                Spacer()
+                
+                Image("cell_detail_indicator")
+            }
+            .padding()
+            
+            if data.hasLine {
+                Separator().padding(.leading, 52)
+            }
+        }
+        .frame(height: 54)
+    }
+}
+
+
+public struct DataSource: Identifiable {
+    public var id: String { icon + title }
+    
+    let icon: String
+    let title: String
+    let hasLine: Bool
+    
+    static let meDataSource: [[DataSource]] = [
+        [DataSource(icon: "me_pay", title: "支付", hasLine: false)],
+        
+        [DataSource(icon: "me_favorite", title: "收藏", hasLine: true),
+         DataSource(icon: "me_photo_album", title: "相册", hasLine: true),
+         DataSource(icon: "me_bank_card", title: "卡包", hasLine: true),
+         DataSource(icon: "me_emoji", title: "表情", hasLine: false)],
+        
+        [DataSource(icon: "me_setting", title: "设置", hasLine: false)],
+    ]
+    
+    static let middleSource = [
+        DataSource(icon: "me_favorite", title: "收藏", hasLine: true),
+        DataSource(icon: "me_photo_album", title: "相册", hasLine: true),
+        DataSource(icon: "me_bank_card", title: "卡包", hasLine: true),
+        DataSource(icon: "me_emoji", title: "表情", hasLine: false)
+    ]
+}
+
+extension Array: Identifiable where Element == DataSource {
+    public var id: String {
+        return self.reduce("") { (result, dataSource) -> String in
+            result + dataSource.id
+        }
+    }
+    
+    
 }
