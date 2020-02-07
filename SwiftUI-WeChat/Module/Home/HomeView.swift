@@ -9,7 +9,7 @@
 import SwiftUI
 
 struct HomeView : View {
-    let chats: [Chat] = mock(name: "chats")
+    @State var chats: [Chat] = mock(name: "chats")
     
     var body: some View {
         List {
@@ -18,14 +18,34 @@ struct HomeView : View {
                 ForEach(chats) { chat in
                     Cell(chat: chat)
                 }
+                .onDelete(perform: delete)
+                .onMove(perform: move)
             }
             .listRowInsets(.zero)
         }
         .onAppear {
             self.root.tabNavigationHidden = false
             self.root.tabNavigationTitle = "微信"
-            self.root.tabNavigationBarTrailingItems = .init(Image(systemName: "plus.circle"))
+            self.root.tabNavigationBarTrailingItems = .init(AddIcon())
+            self.root.tabNavigationBarLeadingItems = .init(EditButton())
         }
+    }
+    
+    private func delete(at offsets: IndexSet) {
+        for index in offsets {
+            chats.remove(at: index)
+        }
+    }
+    
+    private func move(from source: IndexSet, to destination: Int) {
+        var removeChats: [Chat] = []
+        
+        for index in source {
+            removeChats.append(chats[index])
+            chats.remove(at: index)
+        }
+        
+        chats.insert(contentsOf: removeChats, at: destination)
     }
     
     @EnvironmentObject var root: RootViewModel
@@ -74,5 +94,17 @@ private struct Cell: View {
             Separator().padding(.leading, 76)
         }
         .navigationLink(destination: ChatView())
+    }
+}
+
+struct AddIcon: View {
+    var body: some View {
+        NavigationLink(destination: SearchView()) {
+            Image(systemName: "plus.circle")
+            .onTapGesture {
+                    print("点击了加号")
+            }
+        }.foregroundColor(.black)
+
     }
 }

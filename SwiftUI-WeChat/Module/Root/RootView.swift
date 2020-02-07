@@ -8,8 +8,16 @@
 
 import SwiftUI
 
+extension UIViewController {
+    var isDarkModeEnabled: Bool {
+        return traitCollection.userInterfaceStyle == .dark
+    }
+}
+
 struct RootView: View {
     @ObservedObject var model = RootViewModel()
+    
+    @Environment(\.colorScheme) var colorScheme: ColorScheme
     
     var body: some View {
         NavigationView {
@@ -29,7 +37,7 @@ struct RootView: View {
             }
             .accentColor(.green) // 选中某个 Tab 时，Item 的高亮颜色
             .navigationBarHidden(model.tabNavigationHidden)
-            .navigationBarItems(trailing: model.tabNavigationBarTrailingItems)
+                .navigationBarItems(leading: model.tabNavigationBarLeadingItems, trailing: model.tabNavigationBarTrailingItems)
             .navigationBarTitle(model.tabNavigationTitle, displayMode: .inline)
             .environmentObject(model)
         }
@@ -39,7 +47,13 @@ struct RootView: View {
 #if DEBUG
 struct RootTabView_Previews : PreviewProvider {
     static var previews: some View {
-        RootView()
+        Group {
+            RootView()
+                .environment(\.colorScheme, .light)
+
+            RootView()
+                .environment(\.colorScheme, .dark)
+        }
     }
 }
 #endif
