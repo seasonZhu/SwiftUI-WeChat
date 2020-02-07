@@ -11,10 +11,15 @@ import SwiftUI
 struct HomeView : View {
     @State var chats: [Chat] = mock(name: "chats")
     
+    @State var isPressAddButton = false
+    
     var body: some View {
         List {
             Group {
-                SearchEntryView()
+                if self.isPressAddButton {
+                    SearchEntryView()
+                }
+
                 ForEach(chats) { chat in
                     Cell(chat: chat)
                 }
@@ -26,7 +31,7 @@ struct HomeView : View {
         .onAppear {
             self.root.tabNavigationHidden = false
             self.root.tabNavigationTitle = "微信"
-            self.root.tabNavigationBarTrailingItems = .init(AddIcon())
+            self.root.tabNavigationBarTrailingItems = .init(AddIcon(isPressAddButton: self.$isPressAddButton))
             self.root.tabNavigationBarLeadingItems = .init(EditButton())
         }
     }
@@ -98,11 +103,15 @@ private struct Cell: View {
 }
 
 struct AddIcon: View {
+    
+    @Binding var isPressAddButton: Bool
+    
     var body: some View {
         NavigationLink(destination: SearchView()) {
             Image(systemName: "plus.circle")
             .onTapGesture {
-                    print("点击了加号")
+                self.isPressAddButton.toggle()
+                print("点击了加号 \(self.isPressAddButton)")
             }
         }.foregroundColor(.black)
 
