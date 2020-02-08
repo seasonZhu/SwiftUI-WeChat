@@ -13,21 +13,40 @@ struct HomeView : View {
     
     @State var isPressAddButton = false
     
+    @State public var showRefreshView: Bool = false
+    @State public var pullStatus: CGFloat = 0
+    
     var body: some View {
-        List {
+//        List {
+//            Group {
+//                if self.isPressAddButton {
+//                    SearchEntryView()
+//                }
+//
+//                ForEach(chats) { chat in
+//                    Cell(chat: chat)
+//                }
+//                .onDelete(perform: delete)
+//                .onMove(perform: move)
+//            }
+//            .listRowInsets(.zero)
+//        }
+        RefreshableList(showRefreshView: $showRefreshView, pullStatus: $pullStatus, action: {
+            print(self.pullStatus)
+        }, content: {
             Group {
                 if self.isPressAddButton {
                     SearchEntryView()
                 }
 
-                ForEach(chats) { chat in
+                ForEach(self.chats) { chat in
                     Cell(chat: chat)
                 }
-                .onDelete(perform: delete)
-                .onMove(perform: move)
+                .onDelete(perform: self.delete)
+                .onMove(perform: self.move)
             }
             .listRowInsets(.zero)
-        }
+        })
         .onAppear {
             self.root.tabNavigationHidden = false
             self.root.tabNavigationTitle = "微信"
