@@ -13,46 +13,32 @@ struct HomeView : View {
     
     @State var isPressAddButton = false
     
-    @State public var showRefreshView: Bool = false
-    @State public var pullStatus: CGFloat = 0
+    @State var showRefreshView: Bool = false
+    
+    @State var pullStatus: CGFloat = 0
     
     var body: some View {
-//        List {
-//            Group {
-//                if self.isPressAddButton {
-//                    SearchEntryView()
-//                }
-//
-//                ForEach(chats) { chat in
-//                    Cell(chat: chat)
-//                }
-//                .onDelete(perform: delete)
-//                .onMove(perform: move)
-//            }
-//            .listRowInsets(.zero)
-//        }
-        RefreshableList(showRefreshView: $showRefreshView, pullStatus: $pullStatus, action: {
-            print(self.pullStatus)
-        }, content: {
-            Group {
-                if self.isPressAddButton {
-                    SearchEntryView()
-                }
-
-                ForEach(self.chats) { chat in
-                    Cell(chat: chat)
-                }
-                .onDelete(perform: self.delete)
-                .onMove(perform: self.move)
-            }
-            .listRowInsets(.zero)
-        })
+//        NormalChatList(chats: $chats,
+//                       isPressAddButton: $isPressAddButton,
+//                       delete: delete(at:),
+//                       move: move(from:to:))
+        
+        RefreshableChatList(chats: $chats,
+                            isPressAddButton: $isPressAddButton,
+                            showRefreshView: $showRefreshView,
+                            pullStatus: $pullStatus,
+                            delete: delete(at:),
+                            move: move(from:to:))
         .onAppear {
-            self.root.tabNavigationHidden = false
-            self.root.tabNavigationTitle = "微信"
-            self.root.tabNavigationBarTrailingItems = .init(AddIcon(isPressAddButton: self.$isPressAddButton))
-            self.root.tabNavigationBarLeadingItems = .init(EditButton())
+            self.rootSetting()
         }
+    }
+    
+    private func rootSetting() {
+        root.tabNavigationHidden = false
+        root.tabNavigationTitle = "微信"
+        root.tabNavigationBarTrailingItems = .init(AddIcon(isPressAddButton: $isPressAddButton))
+        root.tabNavigationBarLeadingItems = .init(EditButton())
     }
     
     private func delete(at offsets: IndexSet) {
@@ -83,6 +69,67 @@ struct HomeView_Previews : PreviewProvider {
     }
 }
 #endif
+
+private struct NormalChatList: View {
+    @Binding var chats: [Chat]
+    
+    @Binding var isPressAddButton: Bool
+    
+    let delete: (IndexSet) -> Void
+    
+    let move: (IndexSet, Int) -> Void
+    
+    var body: some View {
+        List {
+            Group {
+                if self.isPressAddButton {
+                    SearchEntryView()
+                }
+
+                ForEach(chats) { chat in
+                    Cell(chat: chat)
+                }
+                .onDelete(perform: delete)
+                .onMove(perform: move)
+            }
+            .listRowInsets(.zero)
+        }
+    }
+}
+
+struct RefreshableChatList: View {
+    @Binding var chats: [Chat]
+    
+    @Binding var isPressAddButton: Bool
+    
+    @Binding var showRefreshView: Bool
+    
+    @Binding var pullStatus: CGFloat
+    
+    let delete: (IndexSet) -> Void
+    
+    let move: (IndexSet, Int) -> Void
+    
+    var body: some View {
+        RefreshableList(showRefreshView: $showRefreshView,
+                        pullStatus: $pullStatus, action: {
+            print(self.pullStatus)
+        }, content: {
+            Group {
+                if self.isPressAddButton {
+                    SearchEntryView()
+                }
+
+                ForEach(self.chats) { chat in
+                    Cell(chat: chat)
+                }
+                .onDelete(perform: self.delete)
+                .onMove(perform: self.move)
+            }
+            .listRowInsets(.zero)
+        })
+    }
+}
 
 private struct Cell: View {
     let chat: Chat
