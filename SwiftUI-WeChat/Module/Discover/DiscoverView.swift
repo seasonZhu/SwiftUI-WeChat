@@ -53,6 +53,7 @@ struct DiscoverView : View {
             self.root.tabNavigationHidden = false
             self.root.tabNavigationTitle = "发现"
             self.root.tabNavigationBarTrailingItems = .init(EmptyView())
+            self.root.tabNavigationBarLeadingItems = .init(EmptyView())
         }
     }
     

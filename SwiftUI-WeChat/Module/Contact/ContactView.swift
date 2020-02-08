@@ -35,6 +35,7 @@ struct ContactView : View {
             self.root.tabNavigationHidden = false
             self.root.tabNavigationTitle = "联系人"
             self.root.tabNavigationBarTrailingItems = .init(Image(systemName: "person.badge.plus"))
+            self.root.tabNavigationBarLeadingItems = .init(EmptyView())
         }
     }
     
