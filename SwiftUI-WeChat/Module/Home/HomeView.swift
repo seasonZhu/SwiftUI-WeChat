@@ -18,17 +18,18 @@ struct HomeView : View {
     @State var pullStatus: CGFloat = 0
     
     var body: some View {
-//        NormalChatList(chats: $chats,
-//                       isPressAddButton: $isPressAddButton,
-//                       delete: delete(at:),
-//                       move: move(from:to:))
-        
-        RefreshableChatList(chats: $chats,
-                            isPressAddButton: $isPressAddButton,
-                            showRefreshView: $showRefreshView,
-                            pullStatus: $pullStatus,
-                            delete: delete(at:),
-                            move: move(from:to:))
+        NormalChatList(chats: $chats,
+                       isPressAddButton: $isPressAddButton,
+                       delete: delete(at:),
+                       move: move(from:to:))
+        // 下面这个在真机上运行还是有问题
+            
+//        RefreshableChatList(chats: $chats,
+//                            isPressAddButton: $isPressAddButton,
+//                            showRefreshView: $showRefreshView,
+//                            pullStatus: $pullStatus,
+//                            delete: delete(at:),
+//                            move: move(from:to:))
         .onAppear {
             self.rootSetting()
         }

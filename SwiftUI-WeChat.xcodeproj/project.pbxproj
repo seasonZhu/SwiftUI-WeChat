@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		008A0D8423EE5AC90075D8E3 /* PullToRefresh.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008A0D8323EE5AC90075D8E3 /* PullToRefresh.swift */; };
+		008A0D8723EE9C070075D8E3 /* KeyboardObserving in Frameworks */ = {isa = PBXBuildFile; productRef = 008A0D8623EE9C070075D8E3 /* KeyboardObserving */; };
 		1C081A6D22F69A690077B811 /* VideoPlayer in Frameworks */ = {isa = PBXBuildFile; productRef = 1C081A6C22F69A690077B811 /* VideoPlayer */; };
 		1C081A6F22F69CF80077B811 /* Chat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C081A6E22F69CF80077B811 /* Chat.swift */; };
 		1C3664032385427D00B67AEF /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C3664022385427D00B67AEF /* Message.swift */; };
@@ -89,6 +90,7 @@
 			files = (
 				1CDFD34722E2BD710018D694 /* Extension in Frameworks */,
 				1C081A6D22F69A690077B811 /* VideoPlayer in Frameworks */,
+				008A0D8723EE9C070075D8E3 /* KeyboardObserving in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -323,6 +325,7 @@
 			packageProductDependencies = (
 				1CDFD34622E2BD710018D694 /* Extension */,
 				1C081A6C22F69A690077B811 /* VideoPlayer */,
+				008A0D8623EE9C070075D8E3 /* KeyboardObserving */,
 			);
 			productName = "SwiftUI-WeChat";
 			productReference = 1CFDB18822DAD1FA00D22855 /* SwiftUI-WeChat.app */;
@@ -355,6 +358,7 @@
 			packageReferences = (
 				1CDFD34522E2BD710018D694 /* XCRemoteSwiftPackageReference "Extension" */,
 				1C081A6B22F69A690077B811 /* XCRemoteSwiftPackageReference "VideoPlayer" */,
+				008A0D8523EE9C070075D8E3 /* XCRemoteSwiftPackageReference "KeyboardObserving" */,
 			);
 			productRefGroup = 1CFDB18922DAD1FA00D22855 /* Products */;
 			projectDirPath = "";
@@ -550,7 +554,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "SwiftUI-WeChat/Preview\\ Content";
-				DEVELOPMENT_TEAM = KWMR494226;
+				DEVELOPMENT_TEAM = B6Q5RKSB5N;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "SwiftUI-WeChat/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -570,7 +574,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "SwiftUI-WeChat/Preview\\ Content";
-				DEVELOPMENT_TEAM = KWMR494226;
+				DEVELOPMENT_TEAM = B6Q5RKSB5N;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "SwiftUI-WeChat/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -608,6 +612,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		008A0D8523EE9C070075D8E3 /* XCRemoteSwiftPackageReference "KeyboardObserving" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/nickffox/KeyboardObserving.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.2.1;
+			};
+		};
 		1C081A6B22F69A690077B811 /* XCRemoteSwiftPackageReference "VideoPlayer" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/wxxsw/VideoPlayer";
@@ -627,6 +639,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		008A0D8623EE9C070075D8E3 /* KeyboardObserving */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 008A0D8523EE9C070075D8E3 /* XCRemoteSwiftPackageReference "KeyboardObserving" */;
+			productName = KeyboardObserving;
+		};
 		1C081A6C22F69A690077B811 /* VideoPlayer */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 1C081A6B22F69A690077B811 /* XCRemoteSwiftPackageReference "VideoPlayer" */;

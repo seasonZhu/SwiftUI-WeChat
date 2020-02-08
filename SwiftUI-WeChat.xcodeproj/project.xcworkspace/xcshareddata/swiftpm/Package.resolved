@@ -11,6 +11,15 @@
         }
       },
       {
+        "package": "KeyboardObserving",
+        "repositoryURL": "https://github.com/nickffox/KeyboardObserving.git",
+        "state": {
+          "branch": null,
+          "revision": "6d043ee2402ea4b827601f9b8edcc52a88aabff2",
+          "version": "0.2.1"
+        }
+      },
+      {
         "package": "VideoPlayer",
         "repositoryURL": "https://github.com/wxxsw/VideoPlayer",
         "state": {

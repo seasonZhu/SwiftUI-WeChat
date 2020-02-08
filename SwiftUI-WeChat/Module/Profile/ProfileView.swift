@@ -7,13 +7,27 @@
 //
 
 import SwiftUI
+import KeyboardObserving
 
 struct ProfileView: View {
     @State var isPresented: Bool = false
     
+    @State var name: String = ""
+    
     var body: some View {
-        Text("待开发")
-            .navigationBarTitle("哈哈")
+        VStack {
+            Text("待开发")
+            TextField("输入姓名", text: $name, onEditingChanged: { (isChange) in
+                print("输入有变化\(isChange)")
+            }, onCommit: {
+                print("提交")
+            })
+            .padding()
+            Spacer()
+        }
+        //  这个键盘检查还是有点厉害的,会根据TextField的位置确定进不进行上偏移
+        .keyboardObserving()
+        .navigationBarTitle("哈哈")
 //            .navigationBarItems(leading:
 //                Button(action: {
 //                    print("点击了返回按钮")

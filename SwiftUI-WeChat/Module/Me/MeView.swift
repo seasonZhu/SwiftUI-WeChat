@@ -223,6 +223,4 @@ extension Array: Identifiable where Element == DataSource {
             result + dataSource.id
         }
     }
-    
-    
 }
