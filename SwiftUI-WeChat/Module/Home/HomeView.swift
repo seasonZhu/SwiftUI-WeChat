@@ -38,7 +38,7 @@ struct HomeView : View {
         root.tabNavigationHidden = false
         root.tabNavigationTitle = "微信"
         root.tabNavigationBarTrailingItems = .init(AddIcon(isPressAddButton: $isPressAddButton))
-        root.tabNavigationBarLeadingItems = .init(EditButton())
+        root.tabNavigationBarLeadingItems = .init(EditButton().foregroundColor(.black))
     }
     
     private func delete(at offsets: IndexSet) {

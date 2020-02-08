@@ -43,6 +43,21 @@ private extension SceneDelegate {
         // 统一导航栏样式
         UINavigationBar.appearance().shadowImage = UIImage()
         UINavigationBar.appearance().barTintColor = UIColor(named: "light_gray")
+        
+        // 返回按钮的文字偏移量
+        UIBarButtonItem.appearance()
+            .setBackButtonTitlePositionAdjustment(
+                UIOffset(horizontal: -CGFloat(Int.max), vertical: 0),
+                for: .default)
+        
+        // 返回按钮的文字设置
+        UIBarButtonItem.appearance().setTitleTextAttributes(
+            [NSAttributedString.Key.font: UIFont.systemFont(ofSize: -CGFloat(Int.max)),
+             NSAttributedString.Key.foregroundColor: UIColor.clear],
+            for: .normal)
+        
+        // 返回按钮的颜色
+        UIBarButtonItem.appearance().tintColor = UIColor.black
     }
     
     func configureWindow(windowScene: UIWindowScene) {
