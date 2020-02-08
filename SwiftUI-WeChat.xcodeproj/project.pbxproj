@@ -9,6 +9,13 @@
 /* Begin PBXBuildFile section */
 		008A0D8423EE5AC90075D8E3 /* PullToRefresh.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008A0D8323EE5AC90075D8E3 /* PullToRefresh.swift */; };
 		008A0D8723EE9C070075D8E3 /* KeyboardObserving in Frameworks */ = {isa = PBXBuildFile; productRef = 008A0D8623EE9C070075D8E3 /* KeyboardObserving */; };
+		008A0D8A23EEA6B50075D8E3 /* SwiftUIX in Frameworks */ = {isa = PBXBuildFile; productRef = 008A0D8923EEA6B50075D8E3 /* SwiftUIX */; };
+		008A0D8D23EEC04B0075D8E3 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 008A0D8C23EEC04B0075D8E3 /* SDWebImageSwiftUI */; };
+		008A0D9023EEC1760075D8E3 /* Json in Frameworks */ = {isa = PBXBuildFile; productRef = 008A0D8F23EEC1760075D8E3 /* Json */; };
+		008A0D9223EEC1760075D8E3 /* Request in Frameworks */ = {isa = PBXBuildFile; productRef = 008A0D9123EEC1760075D8E3 /* Request */; };
+		008A0D9523EED62B0075D8E3 /* QGrid in Frameworks */ = {isa = PBXBuildFile; productRef = 008A0D9423EED62B0075D8E3 /* QGrid */; };
+		008A0D9823EF050E0075D8E3 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 008A0D9723EF050E0075D8E3 /* Kingfisher */; };
+		008A0D9A23EF050E0075D8E3 /* KingfisherSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 008A0D9923EF050E0075D8E3 /* KingfisherSwiftUI */; };
 		1C081A6D22F69A690077B811 /* VideoPlayer in Frameworks */ = {isa = PBXBuildFile; productRef = 1C081A6C22F69A690077B811 /* VideoPlayer */; };
 		1C081A6F22F69CF80077B811 /* Chat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C081A6E22F69CF80077B811 /* Chat.swift */; };
 		1C3664032385427D00B67AEF /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C3664022385427D00B67AEF /* Message.swift */; };
@@ -88,9 +95,16 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				008A0D9223EEC1760075D8E3 /* Request in Frameworks */,
+				008A0D8D23EEC04B0075D8E3 /* SDWebImageSwiftUI in Frameworks */,
 				1CDFD34722E2BD710018D694 /* Extension in Frameworks */,
+				008A0D9823EF050E0075D8E3 /* Kingfisher in Frameworks */,
+				008A0D9A23EF050E0075D8E3 /* KingfisherSwiftUI in Frameworks */,
+				008A0D9023EEC1760075D8E3 /* Json in Frameworks */,
+				008A0D9523EED62B0075D8E3 /* QGrid in Frameworks */,
 				1C081A6D22F69A690077B811 /* VideoPlayer in Frameworks */,
 				008A0D8723EE9C070075D8E3 /* KeyboardObserving in Frameworks */,
+				008A0D8A23EEA6B50075D8E3 /* SwiftUIX in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -326,6 +340,13 @@
 				1CDFD34622E2BD710018D694 /* Extension */,
 				1C081A6C22F69A690077B811 /* VideoPlayer */,
 				008A0D8623EE9C070075D8E3 /* KeyboardObserving */,
+				008A0D8923EEA6B50075D8E3 /* SwiftUIX */,
+				008A0D8C23EEC04B0075D8E3 /* SDWebImageSwiftUI */,
+				008A0D8F23EEC1760075D8E3 /* Json */,
+				008A0D9123EEC1760075D8E3 /* Request */,
+				008A0D9423EED62B0075D8E3 /* QGrid */,
+				008A0D9723EF050E0075D8E3 /* Kingfisher */,
+				008A0D9923EF050E0075D8E3 /* KingfisherSwiftUI */,
 			);
 			productName = "SwiftUI-WeChat";
 			productReference = 1CFDB18822DAD1FA00D22855 /* SwiftUI-WeChat.app */;
@@ -359,6 +380,11 @@
 				1CDFD34522E2BD710018D694 /* XCRemoteSwiftPackageReference "Extension" */,
 				1C081A6B22F69A690077B811 /* XCRemoteSwiftPackageReference "VideoPlayer" */,
 				008A0D8523EE9C070075D8E3 /* XCRemoteSwiftPackageReference "KeyboardObserving" */,
+				008A0D8823EEA6B50075D8E3 /* XCRemoteSwiftPackageReference "SwiftUIX" */,
+				008A0D8B23EEC04B0075D8E3 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
+				008A0D8E23EEC1760075D8E3 /* XCRemoteSwiftPackageReference "swift-request" */,
+				008A0D9323EED62A0075D8E3 /* XCRemoteSwiftPackageReference "QGrid" */,
+				008A0D9623EF050D0075D8E3 /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
 			productRefGroup = 1CFDB18922DAD1FA00D22855 /* Products */;
 			projectDirPath = "";
@@ -620,6 +646,46 @@
 				minimumVersion = 0.2.1;
 			};
 		};
+		008A0D8823EEA6B50075D8E3 /* XCRemoteSwiftPackageReference "SwiftUIX" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftUIX/SwiftUIX";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		008A0D8B23EEC04B0075D8E3 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.10.3;
+			};
+		};
+		008A0D8E23EEC1760075D8E3 /* XCRemoteSwiftPackageReference "swift-request" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/carson-katri/swift-request";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.2.1;
+			};
+		};
+		008A0D9323EED62A0075D8E3 /* XCRemoteSwiftPackageReference "QGrid" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Q-Mobile/QGrid";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.1.3;
+			};
+		};
+		008A0D9623EF050D0075D8E3 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.13.0;
+			};
+		};
 		1C081A6B22F69A690077B811 /* XCRemoteSwiftPackageReference "VideoPlayer" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/wxxsw/VideoPlayer";
@@ -643,6 +709,41 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 008A0D8523EE9C070075D8E3 /* XCRemoteSwiftPackageReference "KeyboardObserving" */;
 			productName = KeyboardObserving;
+		};
+		008A0D8923EEA6B50075D8E3 /* SwiftUIX */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 008A0D8823EEA6B50075D8E3 /* XCRemoteSwiftPackageReference "SwiftUIX" */;
+			productName = SwiftUIX;
+		};
+		008A0D8C23EEC04B0075D8E3 /* SDWebImageSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 008A0D8B23EEC04B0075D8E3 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
+			productName = SDWebImageSwiftUI;
+		};
+		008A0D8F23EEC1760075D8E3 /* Json */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 008A0D8E23EEC1760075D8E3 /* XCRemoteSwiftPackageReference "swift-request" */;
+			productName = Json;
+		};
+		008A0D9123EEC1760075D8E3 /* Request */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 008A0D8E23EEC1760075D8E3 /* XCRemoteSwiftPackageReference "swift-request" */;
+			productName = Request;
+		};
+		008A0D9423EED62B0075D8E3 /* QGrid */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 008A0D9323EED62A0075D8E3 /* XCRemoteSwiftPackageReference "QGrid" */;
+			productName = QGrid;
+		};
+		008A0D9723EF050E0075D8E3 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 008A0D9623EF050D0075D8E3 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+		008A0D9923EF050E0075D8E3 /* KingfisherSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 008A0D9623EF050D0075D8E3 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = KingfisherSwiftUI;
 		};
 		1C081A6C22F69A690077B811 /* VideoPlayer */ = {
 			isa = XCSwiftPackageProductDependency;
