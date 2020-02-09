@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		00381D3A23EF9B2E00EC2474 /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = 00381D3923EF9B2E00EC2474 /* Moya */; };
+		00381D3C23EF9B2E00EC2474 /* ReactiveMoya in Frameworks */ = {isa = PBXBuildFile; productRef = 00381D3B23EF9B2E00EC2474 /* ReactiveMoya */; };
+		00381D3E23EF9B2E00EC2474 /* RxMoya in Frameworks */ = {isa = PBXBuildFile; productRef = 00381D3D23EF9B2E00EC2474 /* RxMoya */; };
+		00381D4123EFA9C400EC2474 /* SwiftUIFlux in Frameworks */ = {isa = PBXBuildFile; productRef = 00381D4023EFA9C400EC2474 /* SwiftUIFlux */; };
+		00381D4323EFDAD500EC2474 /* MASSquareMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00381D4223EFDAD500EC2474 /* MASSquareMenuView.swift */; };
 		008A0D8423EE5AC90075D8E3 /* PullToRefresh.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008A0D8323EE5AC90075D8E3 /* PullToRefresh.swift */; };
 		008A0D8723EE9C070075D8E3 /* KeyboardObserving in Frameworks */ = {isa = PBXBuildFile; productRef = 008A0D8623EE9C070075D8E3 /* KeyboardObserving */; };
 		008A0D8A23EEA6B50075D8E3 /* SwiftUIX in Frameworks */ = {isa = PBXBuildFile; productRef = 008A0D8923EEA6B50075D8E3 /* SwiftUIX */; };
@@ -53,6 +58,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		00381D4223EFDAD500EC2474 /* MASSquareMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MASSquareMenuView.swift; sourceTree = "<group>"; };
 		008A0D8323EE5AC90075D8E3 /* PullToRefresh.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PullToRefresh.swift; sourceTree = "<group>"; };
 		1C081A6E22F69CF80077B811 /* Chat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Chat.swift; sourceTree = "<group>"; };
 		1C3664022385427D00B67AEF /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
@@ -95,12 +101,16 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				00381D3E23EF9B2E00EC2474 /* RxMoya in Frameworks */,
 				008A0D9223EEC1760075D8E3 /* Request in Frameworks */,
 				008A0D8D23EEC04B0075D8E3 /* SDWebImageSwiftUI in Frameworks */,
 				1CDFD34722E2BD710018D694 /* Extension in Frameworks */,
 				008A0D9823EF050E0075D8E3 /* Kingfisher in Frameworks */,
 				008A0D9A23EF050E0075D8E3 /* KingfisherSwiftUI in Frameworks */,
+				00381D3C23EF9B2E00EC2474 /* ReactiveMoya in Frameworks */,
+				00381D3A23EF9B2E00EC2474 /* Moya in Frameworks */,
 				008A0D9023EEC1760075D8E3 /* Json in Frameworks */,
+				00381D4123EFA9C400EC2474 /* SwiftUIFlux in Frameworks */,
 				008A0D9523EED62B0075D8E3 /* QGrid in Frameworks */,
 				1C081A6D22F69A690077B811 /* VideoPlayer in Frameworks */,
 				008A0D8723EE9C070075D8E3 /* KeyboardObserving in Frameworks */,
@@ -316,6 +326,7 @@
 			isa = PBXGroup;
 			children = (
 				A37BECFA23E91B10005C68F0 /* Separator.swift */,
+				00381D4223EFDAD500EC2474 /* MASSquareMenuView.swift */,
 			);
 			path = Component;
 			sourceTree = "<group>";
@@ -347,6 +358,10 @@
 				008A0D9423EED62B0075D8E3 /* QGrid */,
 				008A0D9723EF050E0075D8E3 /* Kingfisher */,
 				008A0D9923EF050E0075D8E3 /* KingfisherSwiftUI */,
+				00381D3923EF9B2E00EC2474 /* Moya */,
+				00381D3B23EF9B2E00EC2474 /* ReactiveMoya */,
+				00381D3D23EF9B2E00EC2474 /* RxMoya */,
+				00381D4023EFA9C400EC2474 /* SwiftUIFlux */,
 			);
 			productName = "SwiftUI-WeChat";
 			productReference = 1CFDB18822DAD1FA00D22855 /* SwiftUI-WeChat.app */;
@@ -385,6 +400,8 @@
 				008A0D8E23EEC1760075D8E3 /* XCRemoteSwiftPackageReference "swift-request" */,
 				008A0D9323EED62A0075D8E3 /* XCRemoteSwiftPackageReference "QGrid" */,
 				008A0D9623EF050D0075D8E3 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				00381D3823EF9B2E00EC2474 /* XCRemoteSwiftPackageReference "Moya" */,
+				00381D3F23EFA9C400EC2474 /* XCRemoteSwiftPackageReference "SwiftUIFlux" */,
 			);
 			productRefGroup = 1CFDB18922DAD1FA00D22855 /* Products */;
 			projectDirPath = "";
@@ -417,6 +434,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				00381D4323EFDAD500EC2474 /* MASSquareMenuView.swift in Sources */,
 				1CF58DB723BDB601006E4D03 /* Media.swift in Sources */,
 				1CF6790223BDE3B700B8A4BF /* Comment.swift in Sources */,
 				1CC78C0923B8A7180062F736 /* RootViewModel.swift in Sources */,
@@ -638,6 +656,22 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		00381D3823EF9B2E00EC2474 /* XCRemoteSwiftPackageReference "Moya" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Moya/Moya";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 13.0.1;
+			};
+		};
+		00381D3F23EFA9C400EC2474 /* XCRemoteSwiftPackageReference "SwiftUIFlux" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Dimillian/SwiftUIFlux";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.5.1;
+			};
+		};
 		008A0D8523EE9C070075D8E3 /* XCRemoteSwiftPackageReference "KeyboardObserving" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/nickffox/KeyboardObserving.git";
@@ -705,6 +739,26 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		00381D3923EF9B2E00EC2474 /* Moya */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 00381D3823EF9B2E00EC2474 /* XCRemoteSwiftPackageReference "Moya" */;
+			productName = Moya;
+		};
+		00381D3B23EF9B2E00EC2474 /* ReactiveMoya */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 00381D3823EF9B2E00EC2474 /* XCRemoteSwiftPackageReference "Moya" */;
+			productName = ReactiveMoya;
+		};
+		00381D3D23EF9B2E00EC2474 /* RxMoya */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 00381D3823EF9B2E00EC2474 /* XCRemoteSwiftPackageReference "Moya" */;
+			productName = RxMoya;
+		};
+		00381D4023EFA9C400EC2474 /* SwiftUIFlux */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 00381D3F23EFA9C400EC2474 /* XCRemoteSwiftPackageReference "SwiftUIFlux" */;
+			productName = SwiftUIFlux;
+		};
 		008A0D8623EE9C070075D8E3 /* KeyboardObserving */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 008A0D8523EE9C070075D8E3 /* XCRemoteSwiftPackageReference "KeyboardObserving" */;
