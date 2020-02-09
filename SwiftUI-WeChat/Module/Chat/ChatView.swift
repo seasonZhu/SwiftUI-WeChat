@@ -9,9 +9,19 @@
 import SwiftUI
 
 struct ChatView: View {
+    @State var text: String = ""
+    
     var body: some View {
-        Text("待开发")
-            .navigationBarTitle("聊天", displayMode: .inline)
+        VStack(alignment: .leading, spacing: 10) {
+            Text("待开发")
+                .padding()
+            TextView(text: $text)
+                .foregroundColor(.black)
+                .font(.system(size: 28))
+                .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity)
+                .padding()
+        }.navigationBarTitle("聊天", displayMode: .inline)
+        
     }
 }
 

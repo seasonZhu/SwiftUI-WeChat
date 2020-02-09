@@ -12,6 +12,7 @@
 		00381D3E23EF9B2E00EC2474 /* RxMoya in Frameworks */ = {isa = PBXBuildFile; productRef = 00381D3D23EF9B2E00EC2474 /* RxMoya */; };
 		00381D4123EFA9C400EC2474 /* SwiftUIFlux in Frameworks */ = {isa = PBXBuildFile; productRef = 00381D4023EFA9C400EC2474 /* SwiftUIFlux */; };
 		00381D4323EFDAD500EC2474 /* MASSquareMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00381D4223EFDAD500EC2474 /* MASSquareMenuView.swift */; };
+		00381D4523EFE88700EC2474 /* TextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00381D4423EFE88700EC2474 /* TextView.swift */; };
 		008A0D8423EE5AC90075D8E3 /* PullToRefresh.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008A0D8323EE5AC90075D8E3 /* PullToRefresh.swift */; };
 		008A0D8723EE9C070075D8E3 /* KeyboardObserving in Frameworks */ = {isa = PBXBuildFile; productRef = 008A0D8623EE9C070075D8E3 /* KeyboardObserving */; };
 		008A0D8A23EEA6B50075D8E3 /* SwiftUIX in Frameworks */ = {isa = PBXBuildFile; productRef = 008A0D8923EEA6B50075D8E3 /* SwiftUIX */; };
@@ -59,6 +60,7 @@
 
 /* Begin PBXFileReference section */
 		00381D4223EFDAD500EC2474 /* MASSquareMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MASSquareMenuView.swift; sourceTree = "<group>"; };
+		00381D4423EFE88700EC2474 /* TextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextView.swift; sourceTree = "<group>"; };
 		008A0D8323EE5AC90075D8E3 /* PullToRefresh.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PullToRefresh.swift; sourceTree = "<group>"; };
 		1C081A6E22F69CF80077B811 /* Chat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Chat.swift; sourceTree = "<group>"; };
 		1C3664022385427D00B67AEF /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
@@ -327,6 +329,7 @@
 			children = (
 				A37BECFA23E91B10005C68F0 /* Separator.swift */,
 				00381D4223EFDAD500EC2474 /* MASSquareMenuView.swift */,
+				00381D4423EFE88700EC2474 /* TextView.swift */,
 			);
 			path = Component;
 			sourceTree = "<group>";
@@ -451,6 +454,7 @@
 				1C45C87E22E19D42005722B9 /* ContactView.swift in Sources */,
 				1C8EE81F239115DA00BD60BE /* Member.swift in Sources */,
 				1C8EE81B239111AD00BD60BE /* ProfileView.swift in Sources */,
+				00381D4523EFE88700EC2474 /* TextView.swift in Sources */,
 				1CFDE7F923978CAE00CB348B /* MomentView.swift in Sources */,
 				1CFDB18E22DAD1FA00D22855 /* SceneDelegate.swift in Sources */,
 				1C45C86A22E19935005722B9 /* RootView.swift in Sources */,
