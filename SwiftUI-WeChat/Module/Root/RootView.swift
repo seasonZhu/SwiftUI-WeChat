@@ -20,6 +20,7 @@ struct RootView: View {
     @Environment(\.colorScheme) var colorScheme: ColorScheme
     
     var body: some View {
+        // SwiftUI的结构还真的是先导航栏在Tabbar栏,和UIKit的结构还真的是不同
         NavigationView {
             TabView(selection: $model.tabSelection) {
                 HomeView()

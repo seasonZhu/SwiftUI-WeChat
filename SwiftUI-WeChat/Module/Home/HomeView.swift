@@ -13,6 +13,8 @@ struct HomeView : View {
     
     @State var isPressAddButton = false
     
+    @State var isShow = false
+    
     @State var showRefreshView: Bool = false
     
     @State var pullStatus: CGFloat = 0
@@ -20,8 +22,10 @@ struct HomeView : View {
     var body: some View {
         NormalChatList(chats: $chats,
                        isPressAddButton: $isPressAddButton,
+                       isShow: $isShow,
                        delete: delete(at:),
-                       move: move(from:to:))
+                       move: move(from:to:)
+        )
         // 下面这个在真机上运行还是有问题
             
 //        RefreshableChatList(chats: $chats,
@@ -39,7 +43,7 @@ struct HomeView : View {
         root.tabNavigationHidden = false
         root.tabNavigationTitle = "微信"
         root.tabNavigationBarTrailingItems = .init(AddIcon(isPressAddButton: $isPressAddButton))
-        root.tabNavigationBarLeadingItems = .init(EditButton().foregroundColor(.black))
+        root.tabNavigationBarLeadingItems = .init(ShowButton(isShow: $isShow).foregroundColor(.black))
     }
     
     private func delete(at offsets: IndexSet) {
@@ -76,6 +80,8 @@ private struct NormalChatList: View {
     
     @Binding var isPressAddButton: Bool
     
+    @Binding var isShow: Bool
+    
     let delete: (IndexSet) -> Void
     
     let move: (IndexSet, Int) -> Void
@@ -83,7 +89,7 @@ private struct NormalChatList: View {
     var body: some View {
         List {
             Group {
-                if self.isPressAddButton {
+                if self.isShow {
                     SearchEntryView()
                 }
 
@@ -182,5 +188,17 @@ struct AddIcon: View {
             }
         }.foregroundColor(.black)
 
+    }
+}
+
+struct ShowButton: View {
+    @Binding var isShow: Bool
+    
+    var body: some View {
+        Button(action: {
+            self.isShow.toggle()
+        }) {
+            Image(systemName: self.isShow ? "magnifyingglass.circle.fill" : "magnifyingglass.circle")
+        }
     }
 }
