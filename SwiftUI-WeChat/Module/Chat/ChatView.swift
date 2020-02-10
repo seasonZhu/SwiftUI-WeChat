@@ -28,7 +28,8 @@ struct ChatView: View {
             if list != nil {
                 List {
                     ForEach(list!, id: \.id) {
-                        Text($0.topicTittle ?? "")
+                        //Text($0.topicTittle ?? "")
+                        ListCell(item: $0)
                     }
                 }
                 .padding()
@@ -65,6 +66,23 @@ struct ChatView: View {
             case .error(let error):
                 print(error)
             }
+        }
+    }
+}
+
+struct ListCell: View {
+    var item: TopicItem?
+    
+    var body: some View {
+        VStack(alignment: .leading, spacing: 10) {
+            HStack {
+                Text(item?.topicTittle ?? "")
+                Spacer()
+                Text(item?.upTime ?? "")
+            }
+            Text(item?.topicDesc ?? "")
+            
+            Separator()
         }
     }
 }
