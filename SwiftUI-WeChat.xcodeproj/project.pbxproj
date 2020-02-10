@@ -23,6 +23,7 @@
 		008A0D9523EED62B0075D8E3 /* QGrid in Frameworks */ = {isa = PBXBuildFile; productRef = 008A0D9423EED62B0075D8E3 /* QGrid */; };
 		008A0D9823EF050E0075D8E3 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 008A0D9723EF050E0075D8E3 /* Kingfisher */; };
 		008A0D9A23EF050E0075D8E3 /* KingfisherSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 008A0D9923EF050E0075D8E3 /* KingfisherSwiftUI */; };
+		00BACE0723F0E99700CD6BA9 /* ExampleAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00BACE0623F0E99700CD6BA9 /* ExampleAPI.swift */; };
 		1C081A6D22F69A690077B811 /* VideoPlayer in Frameworks */ = {isa = PBXBuildFile; productRef = 1C081A6C22F69A690077B811 /* VideoPlayer */; };
 		1C081A6F22F69CF80077B811 /* Chat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C081A6E22F69CF80077B811 /* Chat.swift */; };
 		1C3664032385427D00B67AEF /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C3664022385427D00B67AEF /* Message.swift */; };
@@ -63,6 +64,7 @@
 		00381D4223EFDAD500EC2474 /* MASSquareMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MASSquareMenuView.swift; sourceTree = "<group>"; };
 		00381D4423EFE88700EC2474 /* TextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextView.swift; sourceTree = "<group>"; };
 		008A0D8323EE5AC90075D8E3 /* PullToRefresh.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PullToRefresh.swift; sourceTree = "<group>"; };
+		00BACE0623F0E99700CD6BA9 /* ExampleAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleAPI.swift; sourceTree = "<group>"; };
 		1C081A6E22F69CF80077B811 /* Chat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Chat.swift; sourceTree = "<group>"; };
 		1C3664022385427D00B67AEF /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		1C36808323094FA600B9DCF5 /* chats.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = chats.json; sourceTree = "<group>"; };
@@ -125,6 +127,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		00BACE0523F0E97600CD6BA9 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				00BACE0623F0E99700CD6BA9 /* ExampleAPI.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
 		1C081A6822F698F20077B811 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -304,6 +314,7 @@
 		1CFDB18A22DAD1FA00D22855 /* SwiftUI-WeChat */ = {
 			isa = PBXGroup;
 			children = (
+				00BACE0523F0E97600CD6BA9 /* API */,
 				1C45C86722E19902005722B9 /* Bootstrap */,
 				A37BECF923E91AF5005C68F0 /* Component */,
 				1C59B98223B6F7B60001541C /* Config */,
@@ -444,6 +455,7 @@
 				00381D4323EFDAD500EC2474 /* MASSquareMenuView.swift in Sources */,
 				1CF58DB723BDB601006E4D03 /* Media.swift in Sources */,
 				1CF6790223BDE3B700B8A4BF /* Comment.swift in Sources */,
+				00BACE0723F0E99700CD6BA9 /* ExampleAPI.swift in Sources */,
 				1CC78C0923B8A7180062F736 /* RootViewModel.swift in Sources */,
 				008A0D8423EE5AC90075D8E3 /* PullToRefresh.swift in Sources */,
 				1C081A6F22F69CF80077B811 /* Chat.swift in Sources */,
