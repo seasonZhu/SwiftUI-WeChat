@@ -173,6 +173,15 @@
         }
       },
       {
+        "package": "TextView",
+        "repositoryURL": "https://github.com/kenmueller/TextView",
+        "state": {
+          "branch": null,
+          "revision": "cb641ab266110069409c1da945333742b98487f2",
+          "version": "1.2.0"
+        }
+      },
+      {
         "package": "VideoPlayer",
         "repositoryURL": "https://github.com/wxxsw/VideoPlayer",
         "state": {

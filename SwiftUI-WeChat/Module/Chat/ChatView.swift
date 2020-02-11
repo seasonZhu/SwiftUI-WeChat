@@ -7,9 +7,12 @@
 //
 
 import SwiftUI
+import TextView
 
 struct ChatView: View {
     @State var text: String = ""
+    
+    @State var isEditing = false
     
     @State var list: [TopicItem]?
     
@@ -19,7 +22,7 @@ struct ChatView: View {
         VStack(alignment: .leading, spacing: 10) {
             Text("待开发")
                 .padding()
-            TextView(text: $text)
+            TextView(text: $text, isEditing: $isEditing)
                 .foregroundColor(.black)
                 .font(.system(size: 28))
                 .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: 44)

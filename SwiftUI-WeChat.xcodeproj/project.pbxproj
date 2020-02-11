@@ -25,6 +25,7 @@
 		008A0D9A23EF050E0075D8E3 /* KingfisherSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 008A0D9923EF050E0075D8E3 /* KingfisherSwiftUI */; };
 		00BACE0723F0E99700CD6BA9 /* ExampleAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00BACE0623F0E99700CD6BA9 /* ExampleAPI.swift */; };
 		00BACE0923F11B5D00CD6BA9 /* VStackContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00BACE0823F11B5D00CD6BA9 /* VStackContentView.swift */; };
+		00CB73B223F23F00002F72B3 /* TextView in Frameworks */ = {isa = PBXBuildFile; productRef = 00CB73B123F23F00002F72B3 /* TextView */; };
 		1C081A6D22F69A690077B811 /* VideoPlayer in Frameworks */ = {isa = PBXBuildFile; productRef = 1C081A6C22F69A690077B811 /* VideoPlayer */; };
 		1C081A6F22F69CF80077B811 /* Chat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C081A6E22F69CF80077B811 /* Chat.swift */; };
 		1C3664032385427D00B67AEF /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C3664022385427D00B67AEF /* Message.swift */; };
@@ -116,6 +117,7 @@
 				008A0D9A23EF050E0075D8E3 /* KingfisherSwiftUI in Frameworks */,
 				00381D3C23EF9B2E00EC2474 /* ReactiveMoya in Frameworks */,
 				00381D3A23EF9B2E00EC2474 /* Moya in Frameworks */,
+				00CB73B223F23F00002F72B3 /* TextView in Frameworks */,
 				008A0D9023EEC1760075D8E3 /* Json in Frameworks */,
 				00381D4823EFF17F00EC2474 /* SwiftUICharts in Frameworks */,
 				00381D4123EFA9C400EC2474 /* SwiftUIFlux in Frameworks */,
@@ -382,6 +384,7 @@
 				00381D3D23EF9B2E00EC2474 /* RxMoya */,
 				00381D4023EFA9C400EC2474 /* SwiftUIFlux */,
 				00381D4723EFF17F00EC2474 /* SwiftUICharts */,
+				00CB73B123F23F00002F72B3 /* TextView */,
 			);
 			productName = "SwiftUI-WeChat";
 			productReference = 1CFDB18822DAD1FA00D22855 /* SwiftUI-WeChat.app */;
@@ -423,6 +426,7 @@
 				00381D3823EF9B2E00EC2474 /* XCRemoteSwiftPackageReference "Moya" */,
 				00381D3F23EFA9C400EC2474 /* XCRemoteSwiftPackageReference "SwiftUIFlux" */,
 				00381D4623EFF17F00EC2474 /* XCRemoteSwiftPackageReference "ChartView" */,
+				00CB73B023F23F00002F72B3 /* XCRemoteSwiftPackageReference "TextView" */,
 			);
 			productRefGroup = 1CFDB18922DAD1FA00D22855 /* Products */;
 			projectDirPath = "";
@@ -752,6 +756,14 @@
 				minimumVersion = 5.13.0;
 			};
 		};
+		00CB73B023F23F00002F72B3 /* XCRemoteSwiftPackageReference "TextView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kenmueller/TextView";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.2.0;
+			};
+		};
 		1C081A6B22F69A690077B811 /* XCRemoteSwiftPackageReference "VideoPlayer" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/wxxsw/VideoPlayer";
@@ -835,6 +847,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 008A0D9623EF050D0075D8E3 /* XCRemoteSwiftPackageReference "Kingfisher" */;
 			productName = KingfisherSwiftUI;
+		};
+		00CB73B123F23F00002F72B3 /* TextView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 00CB73B023F23F00002F72B3 /* XCRemoteSwiftPackageReference "TextView" */;
+			productName = TextView;
 		};
 		1C081A6C22F69A690077B811 /* VideoPlayer */ = {
 			isa = XCSwiftPackageProductDependency;
