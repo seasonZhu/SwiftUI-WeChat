@@ -66,7 +66,7 @@ struct ChatView: View {
             case .success(let list):
                 self.list = list
                 self.isNetWorkSuccess = true
-            case .error(let error):
+            case .failure(let error):
                 print(error)
             }
         }

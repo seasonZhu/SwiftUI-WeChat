@@ -40,7 +40,7 @@ extension ExampleAPI: TargetType {
     }
     
     var task: Task {
-        var parmeters:[String:Any] = [:]
+        var parmeters: [String:Any] = [:]
         switch self {
         case .topic:
             parmeters = [:]
@@ -69,7 +69,7 @@ struct ListItem: Codable {
     var topicStatus: Int?
 }
 
-
+//MARK:- API对应的ObservableObject模型
 class Topic: ObservableObject, Codable {
     var list: [TopicItem]?
     var code: Int?
@@ -88,7 +88,7 @@ class TopicItem: ObservableObject, Codable {
 //MARK:- 封装请求结果与其回调
 enum ResponseResult<T: Codable, E: Error> {
     case success(T?)
-    case error(E)
+    case failure(E)
 }
 
 typealias ResponseResultCallback<T: Codable, E: Error> = (ResponseResult<T, E>) -> Void
@@ -103,7 +103,7 @@ class ViewModel {
                 let list = try? response.map(Topic.self).list
                 callback(.success(list))
             case .failure(let error):
-                callback(.error(error))
+                callback(.failure(error))
             }
         }
     }

@@ -1,0 +1,1892 @@
+<html>
+               <head>
+                 <base href="file:///Users/dy/Documents/">
+                 <meta charset="UTF-8">
+                 <meta name = "viewport" content = "width = device-width, initial-scale = 1, maximum-scale = 1">
+                 <style id="style">
+@font-face {
+  font-family: 'Lato';
+  src: url('file:///Applications/Boostnote.app/Contents/Resources/app/resources/fonts/Lato-Regular.woff2') format('woff2'), /* Modern Browsers */
+       url('file:///Applications/Boostnote.app/Contents/Resources/app/resources/fonts/Lato-Regular.woff') format('woff'), /* Modern Browsers */
+       url('file:///Applications/Boostnote.app/Contents/Resources/app/resources/fonts/Lato-Regular.ttf') format('truetype');
+  font-style: normal;
+  font-weight: normal;
+  text-rendering: optimizeLegibility;
+}
+@font-face {
+  font-family: 'Lato';
+  src: url('file:///Applications/Boostnote.app/Contents/Resources/app/resources/fonts/Lato-Black.woff2') format('woff2'), /* Modern Browsers */
+       url('file:///Applications/Boostnote.app/Contents/Resources/app/resources/fonts/Lato-Black.woff') format('woff'), /* Modern Browsers */
+       url('file:///Applications/Boostnote.app/Contents/Resources/app/resources/fonts/Lato-Black.ttf') format('truetype');
+  font-style: normal;
+  font-weight: 700;
+  text-rendering: optimizeLegibility;
+}
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Material Icons'),
+       local('MaterialIcons-Regular'),
+       url('file:///Applications/Boostnote.app/Contents/Resources/app/resources/fonts/MaterialIcons-Regular.woff2') format('woff2'),
+       url('file:///Applications/Boostnote.app/Contents/Resources/app/resources/fonts/MaterialIcons-Regular.woff') format('woff'),
+       url('file:///Applications/Boostnote.app/Contents/Resources/app/resources/fonts/MaterialIcons-Regular.ttf') format('truetype');
+}
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-weight: inherit;
+  font-style: inherit;
+  font-family: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+body {
+  line-height: 1;
+  color: #000;
+  background: #fff;
+}
+ol,
+ul {
+  list-style: none;
+}
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+  vertical-align: middle;
+}
+caption,
+th,
+td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+a img {
+  border: none;
+}
+body {
+  font-size: 16px;
+  padding: 15px;
+  font-family: helvetica, arial, sans-serif;
+  line-height: 1.6;
+  overflow-x: hidden;
+  background-color: #fff;
+}
+body .katex-display > .katex {
+  white-space: nowrap;
+}
+body .katex {
+  white-space: initial;
+}
+body .katex .katex-html {
+  display: -webkit-inline-box;
+  display: -moz-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-box;
+  display: inline-flex;
+}
+body .katex .mfrac>.vlist>span:nth-child(2) {
+  top: 0 !important;
+}
+body .katex-error {
+  background-color: #f2dede;
+  color: #a64444;
+  padding: 5px;
+  margin: -5px;
+  border-radius: 5px;
+}
+body .flowchart-error,
+body .sequence-error .chart-error {
+  background-color: #f2dede;
+  color: #a64444;
+  padding: 5px;
+  border-radius: 5px;
+  -webkit-box-pack: left;
+  -moz-box-pack: left;
+  -o-box-pack: left;
+  -ms-flex-pack: left;
+  -webkit-justify-content: left;
+  justify-content: left;
+}
+li label.taskListItem {
+  margin-left: -1.8em;
+}
+li label.taskListItem.checked {
+  text-decoration: line-through;
+  opacity: 0.5;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+  filter: alpha(opacity=50);
+}
+li.taskListItem.checked {
+  text-decoration: line-through;
+  opacity: 0.5;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+  filter: alpha(opacity=50);
+}
+div.math-rendered {
+  text-align: center;
+}
+.math-failed {
+  background-color: rgba(255,0,0,0.1);
+  color: #d90000;
+  padding: 5px;
+  margin: 5px 0;
+  border-radius: 5px;
+}
+sup {
+  position: relative;
+  top: -0.4em;
+  font-size: 0.8em;
+  vertical-align: top;
+}
+sub {
+  position: relative;
+  bottom: -0.4em;
+  font-size: 0.8em;
+  vertical-align: top;
+}
+a {
+  color: #2bac8f;
+  text-decoration: none;
+  padding: 5px;
+  border-radius: 5px;
+  margin: -5px;
+  -webkit-transition: 0.1s;
+  -moz-transition: 0.1s;
+  -o-transition: 0.1s;
+  -ms-transition: 0.1s;
+  transition: 0.1s;
+}
+a img {
+  vertical-align: sub;
+}
+a:hover {
+  color: #2eb899;
+  text-decoration: underline;
+  background-color: rgba(255,201,92,0.3);
+}
+a:visited {
+  color: #2bac8f;
+}
+hr {
+  border-top: none;
+  border-bottom: solid 1px #d0d0d0;
+  margin: 15px 0;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: bold;
+  word-wrap: break-word;
+}
+h1 {
+  font-size: 2.55em;
+  padding-bottom: 0.3em;
+  line-height: 1.2em;
+  border-bottom: solid 1px #d0d0d0;
+  margin: 1em 0 0.44em;
+}
+h1:first-child {
+  margin-top: 0;
+}
+h2 {
+  font-size: 1.75em;
+  padding-bottom: 0.3em;
+  line-height: 1.225em;
+  border-bottom: solid 1px #d0d0d0;
+  margin: 1em 0 0.57em;
+}
+h2:first-child {
+  margin-top: 0;
+}
+h3 {
+  font-size: 1.5em;
+  line-height: 1.43em;
+  margin: 1em 0 0.66em;
+}
+h4 {
+  font-size: 1.25em;
+  line-height: 1.4em;
+  margin: 1em 0 0.8em;
+}
+h5 {
+  font-size: 1em;
+  line-height: 1.4em;
+  margin: 1em 0 1em;
+}
+h6 {
+  font-size: 1em;
+  line-height: 1.4em;
+  margin: 1em 0 1em;
+  color: #777;
+}
+p {
+  line-height: 1.6em;
+  margin: 0 0 1em;
+  white-space: pre-line;
+  word-wrap: break-word;
+}
+img {
+  cursor: zoom-in;
+  max-width: 100%;
+}
+strong,
+b {
+  font-weight: bold;
+}
+em,
+i {
+  font-style: italic;
+}
+s,
+del,
+strike {
+  text-decoration: line-through;
+}
+u {
+  text-decoration: underline;
+}
+blockquote {
+  border-left: solid 4px #3fb399;
+  margin: 0 0 1em;
+  padding: 0 25px;
+}
+ul {
+  list-style-type: disc;
+  padding-left: 2em;
+  margin-bottom: 1em;
+}
+ul li {
+  display: list-item;
+}
+ul li.taskListItem {
+  list-style: none;
+}
+ul li.taskListItem>input {
+  margin-left: -1.6em;
+}
+ul li.taskListItem>p {
+  margin-left: -1.8em;
+}
+ul li p {
+  margin: 0;
+}
+ul>li>ul,
+ul>li>ol {
+  margin: 0;
+}
+ul>li>ul {
+  list-style-type: circle;
+}
+ul>li>ul>li>ul {
+  list-style-type: square;
+}
+ol {
+  list-style-type: decimal;
+  padding-left: 2em;
+  margin-bottom: 1em;
+}
+ol li {
+  display: list-item;
+}
+ol li p {
+  margin: 0;
+}
+ol>li>ul,
+ol>li>ol {
+  margin: 0;
+}
+code {
+  padding: 0.2em 0.4em;
+  background-color: #f7f7f7;
+  border-radius: 3px;
+  font-size: 1em;
+  text-decoration: none;
+  margin-right: 2px;
+}
+pre {
+  padding: 0.5rem !important;
+  border: solid 1px #d1d1d1;
+  border-radius: 5px;
+  overflow-x: auto;
+  margin: 0 0 1rem;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: box;
+  display: flex;
+  line-height: 1.4em;
+}
+pre code {
+  background-color: inherit;
+  margin: 0;
+  padding: 0;
+  border: none;
+  border-radius: 0;
+}
+pre.CodeMirror {
+  height: initial;
+  -webkit-box-lines: multiple;
+  -moz-box-lines: multiple;
+  -o-box-lines: multiple;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+pre.CodeMirror>code {
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  -o-box-flex: 1;
+  box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  overflow-x: auto;
+}
+pre.mermaid svg {
+  max-width: 100% !important;
+}
+pre>span.filename {
+  margin: -0.5rem 100% 0.5rem -0.5rem;
+  padding: 0.125rem 0.375rem;
+  background-color: #777;
+  color: #fff;
+}
+pre>span.filename:empty {
+  display: none;
+}
+pre>span.lineNumber {
+  display: none;
+  font-size: 1em;
+  padding: 0.5rem 0;
+  margin: -0.5rem 0.5rem -0.5rem -0.5rem;
+  border-right: 1px solid;
+  text-align: right;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+pre>span.lineNumber.CodeMirror-gutters {
+  position: initial;
+  top: initial;
+  left: initial;
+  min-height: 0 !important;
+}
+pre>span.lineNumber>span {
+  display: block;
+  padding: 0 0.5em 0;
+}
+table {
+  display: block;
+  width: 100%;
+  margin: 0 0 1em;
+  overflow-x: auto;
+}
+table thead tr {
+  background-color: #fff;
+}
+table thead th {
+  border-style: solid;
+  padding: 6px 13px;
+  line-height: 1.6;
+  border-width: 1px 0 2px 1px;
+  border-color: #d0d0d0;
+  font-weight: bold;
+}
+table thead th:last-child {
+  border-right: solid 1px #d0d0d0;
+}
+table tbody tr:nth-child(2n + 1) {
+  background-color: #f9f9f9;
+}
+table tbody tr:nth-child(2n) {
+  background-color: #fff;
+}
+table tbody td {
+  border-style: solid;
+  padding: 6px 13px;
+  line-height: 1.6;
+  border-width: 0 0 1px 1px;
+  border-color: #d0d0d0;
+}
+table tbody td:last-child {
+  border-right: solid 1px #d0d0d0;
+}
+kbd {
+  background-color: #fafbfc;
+  border: solid 1px #d0d0d0;
+  border-bottom-color: #888;
+  border-radius: 3px;
+  -webkit-box-shadow: inset 0 -1px 0 #959da5;
+  box-shadow: inset 0 -1px 0 #959da5;
+  display: inline-block;
+  font-size: 0.8em;
+  line-height: 1;
+  padding: 3px 5px;
+}
+.admonition.note,
+.admonition.hint,
+.admonition.danger,
+.admonition.caution,
+.admonition.error,
+.admonition.attention {
+  -webkit-box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.2);
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.2);
+  position: relative;
+  margin: 1.5625em 0;
+  padding: 0 1.2rem;
+  border-left: 0.4rem solid #448aff;
+  border-radius: 0.2rem;
+  overflow: auto;
+}
+html .admonition>:last-child {
+  margin-bottom: 1.2rem;
+}
+.admonition .admonition {
+  margin: 1em 0;
+}
+.admonition p {
+  margin-top: 0.5em;
+}
+.admonition.note>.admonition-title:before,
+.admonition.hint>.admonition-title:before,
+.admonition.danger>.admonition-title:before,
+.admonition.caution>.admonition-title:before,
+.admonition.error>.admonition-title:before,
+.admonition.attention>.admonition-title:before {
+  position: absolute;
+  left: 1.2rem;
+  font-family: "Material Icons";
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+/* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+/* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+/* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+/* Support for IE. */
+  font-feature-settings: 'liga';
+}
+.admonition.note>.admonition-title,
+.admonition.hint>.admonition-title,
+.admonition.danger>.admonition-title,
+.admonition.caution>.admonition-title,
+.admonition.error>.admonition-title,
+.admonition.attention>.admonition-title {
+  margin: 0 -1.2rem;
+  padding: 0.8rem 1.2rem 0.8rem 4rem;
+  border-bottom: 0.1rem solid rgba(68,138,255,0.1);
+  background-color: rgba(68,138,255,0.1);
+  font-weight: 700;
+}
+.admonition>.admonition-title:last-child {
+  margin-bottom: 0;
+}
+.admonition.note {
+  border-left-color: #0288d1;
+}
+.admonition.note>.admonition-title {
+  border-bottom-color: 0.1rem solid rgba(2,136,209,0.2);
+  background-color: rgba(2,136,209,0.2);
+}
+.admonition.note>.admonition-title:before {
+  color: #0288d1;
+  content: "note";
+}
+.admonition.hint {
+  border-left-color: #009688;
+}
+.admonition.hint>.admonition-title {
+  border-bottom-color: 0.1rem solid rgba(0,150,136,0.2);
+  background-color: rgba(0,150,136,0.2);
+}
+.admonition.hint>.admonition-title:before {
+  color: #009688;
+  content: "info_outline";
+}
+.admonition.danger {
+  border-left-color: #c2185b;
+}
+.admonition.danger>.admonition-title {
+  border-bottom-color: 0.1rem solid rgba(194,24,91,0.2);
+  background-color: rgba(194,24,91,0.2);
+}
+.admonition.danger>.admonition-title:before {
+  color: #c2185b;
+  content: "block";
+}
+.admonition.caution {
+  border-left-color: #ffa726;
+}
+.admonition.caution>.admonition-title {
+  border-bottom-color: 0.1rem solid rgba(255,167,38,0.2);
+  background-color: rgba(255,167,38,0.2);
+}
+.admonition.caution>.admonition-title:before {
+  color: #ffa726;
+  content: "warning";
+}
+.admonition.error {
+  border-left-color: #d32f2f;
+}
+.admonition.error>.admonition-title {
+  border-bottom-color: 0.1rem solid rgba(211,47,47,0.2);
+  background-color: rgba(211,47,47,0.2);
+}
+.admonition.error>.admonition-title:before {
+  color: #d32f2f;
+  content: "error_outline";
+}
+.admonition.attention {
+  border-left-color: #455a64;
+}
+.admonition.attention>.admonition-title {
+  border-bottom-color: 0.1rem solid rgba(69,90,100,0.2);
+  background-color: rgba(69,90,100,0.2);
+}
+.admonition.attention>.admonition-title:before {
+  color: #455a64;
+  content: "priority_high";
+}
+dl {
+  margin: 2rem 0;
+  padding: 0;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: box;
+  display: flex;
+  width: 100%;
+  -webkit-box-lines: multiple;
+  -moz-box-lines: multiple;
+  -o-box-lines: multiple;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-align: start;
+  -moz-box-align: start;
+  -o-box-align: start;
+  -ms-flex-align: start;
+  -webkit-align-items: flex-start;
+  align-items: flex-start;
+  border-bottom: 1px solid #d0d0d0;
+  background-color: #fff;
+}
+dt {
+  border-top: 1px solid #d0d0d0;
+  font-weight: bold;
+  text-align: right;
+  overflow: hidden;
+  -webkit-flex-basis: 20%;
+  flex-basis: 20%;
+  padding: 0.4rem 0.9rem;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+dd {
+  border-top: 1px solid #d0d0d0;
+  -webkit-flex-basis: 80%;
+  flex-basis: 80%;
+  padding: 0.4rem 0.9rem;
+  min-height: 2.5rem;
+  background-color: #fff;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+dd + dd {
+  margin-left: 20%;
+}
+pre.fence {
+  -webkit-box-lines: multiple;
+  -moz-box-lines: multiple;
+  -o-box-lines: multiple;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+pre.fence .chart,
+pre.fence .flowchart,
+pre.fence .mermaid,
+pre.fence .sequence {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: box;
+  display: flex;
+  -webkit-box-pack: center;
+  -moz-box-pack: center;
+  -o-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  background-color: #fff;
+  max-width: 100%;
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  -o-box-flex: 1;
+  -ms-box-flex: 1;
+  box-flex: 1;
+  -webkit-flex-grow: 1;
+  flex-grow: 1;
+}
+pre.fence .chart canvas,
+pre.fence .flowchart canvas,
+pre.fence .mermaid canvas,
+pre.fence .sequence canvas,
+pre.fence .chart svg,
+pre.fence .flowchart svg,
+pre.fence .mermaid svg,
+pre.fence .sequence svg {
+  max-width: 100% !important;
+}
+pre.fence .gallery {
+  width: 100%;
+  height: 50vh;
+}
+pre.fence .gallery .carousel .carousel-main img {
+  min-width: auto;
+  max-width: 100%;
+  min-height: auto;
+  max-height: 100%;
+}
+pre.fence .gallery .carousel .carousel-footer::-webkit-scrollbar-corner {
+  background-color: transparent;
+}
+pre.fence .gallery .carousel .carousel-main,
+pre.fence .gallery .carousel .carousel-footer {
+  background-color: #fff;
+}
+pre.fence .gallery .carousel .prev,
+pre.fence .gallery .carousel .next {
+  color: #333;
+  background-color: rgba(0,0,0,0.3);
+}
+body[data-theme="dark"] {
+  color: #f9f9f9;
+  border-color: #444b59;
+  background-color: #2c3033;
+}
+body[data-theme="dark"] a:hover {
+  background-color: rgba(90,214,186,0.2) !important;
+}
+body[data-theme="dark"] code {
+  color: #ea6730;
+  border-color: #3d4450;
+  background-color: #363a3e;
+}
+body[data-theme="dark"] pre {
+  border-color: #474f5c;
+}
+body[data-theme="dark"] pre code {
+  background-color: transparent;
+}
+body[data-theme="dark"] label.taskListItem {
+  background-color: #2c3033;
+}
+body[data-theme="dark"] table thead tr {
+  background-color: #282b2e;
+}
+body[data-theme="dark"] table thead th {
+  border-color: #444b59;
+}
+body[data-theme="dark"] table thead th:last-child {
+  border-right: solid 1px #444b59;
+}
+body[data-theme="dark"] table tbody tr:nth-child(2n + 1) {
+  background-color: #2c3033;
+}
+body[data-theme="dark"] table tbody tr:nth-child(2n) {
+  background-color: #282b2e;
+}
+body[data-theme="dark"] table tbody td {
+  border-color: #444b59;
+}
+body[data-theme="dark"] table tbody td:last-child {
+  border-right: solid 1px #444b59;
+}
+body[data-theme="dark"] kbd {
+  background-color: #444b59;
+  color: #f9f9f9;
+}
+body[data-theme="dark"] dl {
+  border-color: #444b59;
+  background-color: #282b2e;
+}
+body[data-theme="dark"] dt {
+  border-color: #444b59;
+}
+body[data-theme="dark"] dd {
+  border-color: #444b59;
+  background-color: #2c3033;
+}
+body[data-theme="dark"] pre.fence .gallery .carousel-main,
+body[data-theme="dark"] pre.fence .gallery .carousel-footer {
+  background-color: #2c3033;
+}
+body[data-theme="dark"] pre.fence .gallery .prev,
+body[data-theme="dark"] pre.fence .gallery .next {
+  color: #ddd;
+  background-color: #3a404c;
+}
+body[data-theme="solarized-dark"] {
+  color: #93a1a1;
+  border-color: #444b59;
+  background-color: #073642;
+}
+body[data-theme="solarized-dark"] table thead tr {
+  background-color: #06313b;
+}
+body[data-theme="solarized-dark"] table thead th {
+  border-color: #444b59;
+}
+body[data-theme="solarized-dark"] table thead th:last-child {
+  border-right: solid 1px #444b59;
+}
+body[data-theme="solarized-dark"] table tbody tr:nth-child(2n + 1) {
+  background-color: #073642;
+}
+body[data-theme="solarized-dark"] table tbody tr:nth-child(2n) {
+  background-color: #06313b;
+}
+body[data-theme="solarized-dark"] table tbody td {
+  border-color: #444b59;
+}
+body[data-theme="solarized-dark"] table tbody td:last-child {
+  border-right: solid 1px #444b59;
+}
+body[data-theme="solarized-dark"] dl {
+  border-color: #444b59;
+  background-color: #06313b;
+}
+body[data-theme="solarized-dark"] dt {
+  border-color: #444b59;
+}
+body[data-theme="solarized-dark"] dd {
+  border-color: #444b59;
+  background-color: #073642;
+}
+body[data-theme="solarized-dark"] pre.fence .gallery .carousel-main,
+body[data-theme="solarized-dark"] pre.fence .gallery .carousel-footer {
+  background-color: #073642;
+}
+body[data-theme="solarized-dark"] pre.fence .gallery .prev,
+body[data-theme="solarized-dark"] pre.fence .gallery .next {
+  color: #93a1a1;
+  background-color: #002b36;
+}
+body[data-theme="monokai"] {
+  color: #f8f8f2;
+  border-color: #444b59;
+  background-color: #272822;
+}
+body[data-theme="monokai"] table thead tr {
+  background-color: #23241f;
+}
+body[data-theme="monokai"] table thead th {
+  border-color: #444b59;
+}
+body[data-theme="monokai"] table thead th:last-child {
+  border-right: solid 1px #444b59;
+}
+body[data-theme="monokai"] table tbody tr:nth-child(2n + 1) {
+  background-color: #272822;
+}
+body[data-theme="monokai"] table tbody tr:nth-child(2n) {
+  background-color: #23241f;
+}
+body[data-theme="monokai"] table tbody td {
+  border-color: #444b59;
+}
+body[data-theme="monokai"] table tbody td:last-child {
+  border-right: solid 1px #444b59;
+}
+body[data-theme="monokai"] kbd {
+  background-color: #1e2127;
+}
+body[data-theme="monokai"] dl {
+  border-color: #444b59;
+  background-color: #23241f;
+}
+body[data-theme="monokai"] dt {
+  border-color: #444b59;
+}
+body[data-theme="monokai"] dd {
+  border-color: #444b59;
+  background-color: #272822;
+}
+body[data-theme="monokai"] pre.fence .gallery .carousel-main,
+body[data-theme="monokai"] pre.fence .gallery .carousel-footer {
+  background-color: #272822;
+}
+body[data-theme="monokai"] pre.fence .gallery .prev,
+body[data-theme="monokai"] pre.fence .gallery .next {
+  color: #fff;
+  background-color: #373831;
+}
+body[data-theme="dracula"] {
+  color: #f8f8f2;
+  border-color: #444b59;
+  background-color: #282a36;
+}
+body[data-theme="dracula"] table thead tr {
+  background-color: #242631;
+}
+body[data-theme="dracula"] table thead th {
+  border-color: #444b59;
+}
+body[data-theme="dracula"] table thead th:last-child {
+  border-right: solid 1px #444b59;
+}
+body[data-theme="dracula"] table tbody tr:nth-child(2n + 1) {
+  background-color: #282a36;
+}
+body[data-theme="dracula"] table tbody tr:nth-child(2n) {
+  background-color: #242631;
+}
+body[data-theme="dracula"] table tbody td {
+  border-color: #444b59;
+}
+body[data-theme="dracula"] table tbody td:last-child {
+  border-right: solid 1px #444b59;
+}
+body[data-theme="dracula"] kbd {
+  background-color: #1e2127;
+}
+body[data-theme="dracula"] dl {
+  border-color: #444b59;
+  background-color: #242631;
+}
+body[data-theme="dracula"] dt {
+  border-color: #444b59;
+}
+body[data-theme="dracula"] dd {
+  border-color: #444b59;
+  background-color: #282a36;
+}
+body[data-theme="dracula"] pre.fence .gallery .carousel-main,
+body[data-theme="dracula"] pre.fence .gallery .carousel-footer {
+  background-color: #282a36;
+}
+body[data-theme="dracula"] pre.fence .gallery .prev,
+body[data-theme="dracula"] pre.fence .gallery .next {
+  color: #f8f8f2;
+  background-color: #44475a;
+}
+/*# sourceMappingURL=browser/components/markdown.css.map */
+
+body {
+  font-family: 'Lato','helvetica','arial','sans-serif';
+  font-size: 14px;
+  false
+}
+@media print {
+  body {
+    padding-bottom: initial;
+  }
+}
+code {
+  font-family: 'Monaco','Monaco','Menlo','Ubuntu Mono','Consolas','source-code-pro','monospace';
+  background-color: rgba(0,0,0,0.04);
+}
+.lineNumber {
+  display: block !important;
+  font-family: 'Monaco','Monaco','Menlo','Ubuntu Mono','Consolas','source-code-pro','monospace';
+}
+
+.clipboardButton {
+  color: rgba(147,147,149,0.8);;
+  fill: rgba(147,147,149,1);;
+  border-radius: 50%;
+  margin: 0px 10px;
+  border: none;
+  background-color: transparent;
+  outline: none;
+  height: 15px;
+  width: 15px;
+  cursor: pointer;
+}
+
+.clipboardButton:hover {
+  transition: 0.2s;
+  color: #939395;
+  fill: #939395;
+  background-color: rgba(0,0,0,0.1);
+}
+
+h1, h2 {
+  border: none;
+}
+
+h1 {
+  padding-bottom: 4px;
+  margin: 1em 0 8px;
+}
+
+h2 {
+  padding-bottom: 0.2em;
+  margin: 1em 0 0.37em;
+}
+
+body p {
+  white-space: normal;
+}
+
+@media print {
+  body[data-theme="dark"] {
+    color: #000;
+    background-color: #fff;
+  }
+  .clipboardButton {
+    display: none
+  }
+}
+
+
+</style>
+                 <link rel="stylesheet" href="css/dracula.css"><link rel="stylesheet" href="css/katex.min.css"><link rel="stylesheet" href="css/codemirror.css"><link rel="stylesheet" href="css/main.min.css">
+               </head>
+               <body><h1 id="SwiftUI-Cheat-Sheet" data-line="0">SwiftUI Cheat Sheet</h1>
+<p data-line="2"><img src="file:////Users/dy/Boostnote/attachments/58f1ea1f-759b-4271-86c6-f10be9c2538e/866e4591.png" alt="SwiftUI" /></p>
+<h3 id="Table-of-Contents" data-line="5">Table of Contents</h3>
+<ul>
+<li data-line="6"><a href="#swiftui-cheat-sheet">SwiftUI Cheat Sheet</a>
+<ul>
+<li data-line="7"><a href="#table-of-contents">Table of Contents</a></li>
+</ul>
+</li>
+<li data-line="8"><a href="#resource">Resource</a></li>
+<li data-line="9"><a href="#uikit-equivalent-in-swiftui">UIKit equivalent in SwiftUI</a></li>
+<li data-line="10"><a href="#view">View</a>
+<ul>
+<li data-line="11"><a href="#text">Text</a></li>
+<li data-line="12"><a href="#image">Image</a></li>
+<li data-line="13"><a href="#shape">Shape</a></li>
+</ul>
+</li>
+<li data-line="14"><a href="#layout">Layout</a>
+<ul>
+<li data-line="15"><a href="#background">Background</a></li>
+<li data-line="16"><a href="#vstack">VStack</a></li>
+<li data-line="17"><a href="#hstack">HStack</a></li>
+<li data-line="18"><a href="#zstack">ZStack</a></li>
+</ul>
+</li>
+<li data-line="19"><a href="#input">Input</a>
+<ul>
+<li data-line="20"><a href="#toggle">Toggle</a></li>
+<li data-line="21"><a href="#button">Button</a></li>
+<li data-line="22"><a href="#textfield">TextField</a></li>
+<li data-line="23"><a href="#slider">Slider</a></li>
+<li data-line="24"><a href="#date-picker">Date Picker</a></li>
+<li data-line="25"><a href="#segmented-control">Segmented Control</a></li>
+<li data-line="26"><a href="#stepper">Stepper</a></li>
+<li data-line="27"><a href="#tap">Tap</a></li>
+<li data-line="28"><a href="#gesture">Gesture</a></li>
+</ul>
+</li>
+<li data-line="29"><a href="#list">List</a></li>
+<li data-line="30"><a href="#containers">Containers</a>
+<ul>
+<li data-line="31"><a href="#navigationview">NavigationView</a></li>
+<li data-line="32"><a href="#tabbedview">TabbedView</a></li>
+<li data-line="33"><a href="#group">Group</a></li>
+</ul>
+</li>
+<li data-line="34"><a href="#alerts-and-action-sheets">Alerts and Action Sheets</a></li>
+<li data-line="35"><a href="#navigation">Navigation</a></li>
+<li data-line="36"><a href="#work-with-uikit">Work with UIKit</a>
+<ul>
+<li data-line="37"><a href="#navigate-to-viewcontroller">Navigate to ViewController</a></li>
+<li data-line="38"><a href="#use-uikit-and-swiftui-views-together">Use UIKit and SwiftUI Views Together</a></li>
+</ul>
+</li>
+</ul>
+<h1 id="Resource" data-line="40">Resource</h1>
+<ul>
+<li data-line="41"><a href="https://developer.apple.com/tutorials/swiftui/creating-and-combining-views">SwiftUI Tutorials (Official)</a></li>
+<li data-line="42"><a href="https://developer.apple.com/videos/play/wwdc2019/204/">Introducing SwiftUI: Building Your First App (Official)</a></li>
+<li data-line="43"><a href="https://www.raywenderlich.com/3715234-swiftui-getting-started">SwiftUI: Getting Started Raywenderlich</a></li>
+<li data-line="44"><a href="https://developer.apple.com/videos/play/wwdc2019/216">SwiftUI Essentials (Official)</a></li>
+<li data-line="45"><a href="https://medium.com/@martinlasek/swiftui-getting-started-372389fff423">SwiftUI - How to setup a project</a></li>
+<li data-line="46"><a href="https://github.com/Juanpe/About-SwiftUI">About SwiftUI</a></li>
+</ul>
+<h1 id="UIKit-equivalent-in-SwiftUI" data-line="49">UIKit equivalent in SwiftUI</h1>
+<table data-line="50">
+<thead>
+<tr>
+<th>UIKit</th>
+<th><a href="https://developer.apple.com/xcode/swiftui/">SwiftUI</a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>UILabel</td>
+<td><a href="#text">Text</a></td>
+</tr>
+<tr>
+<td>UIImageView</td>
+<td><a href="#image">Image</a></td>
+</tr>
+<tr>
+<td>UITextField</td>
+<td><a href="#textfield">TextField</a></td>
+</tr>
+<tr>
+<td>UITextView</td>
+<td>No equivalent (use <a href="#text">Text</a>/<a href="#textfield">TextField</a>)</td>
+</tr>
+<tr>
+<td>UISwitch</td>
+<td><a href="#toggle">Toggle</a></td>
+</tr>
+<tr>
+<td>UISlider</td>
+<td><a href="#slider">Slider</a></td>
+</tr>
+<tr>
+<td>UIButton</td>
+<td><a href="#button">Button</a></td>
+</tr>
+<tr>
+<td>UITableView</td>
+<td><a href="#list">List</a></td>
+</tr>
+<tr>
+<td>UICollectionView</td>
+<td>No equivalent (can be implemented by <a href="#list">List</a>)</td>
+</tr>
+<tr>
+<td>UINavigationController</td>
+<td><a href="#navigationview">NavigationView</a></td>
+</tr>
+<tr>
+<td>UITabBarController</td>
+<td><a href="#tabbedview">TabbedView</a></td>
+</tr>
+<tr>
+<td>UIAlertController with style .alert</td>
+<td><a href="#alerts-and-action-sheets">Alert</a></td>
+</tr>
+<tr>
+<td>UIAlertController with style .actionSheet</td>
+<td><a href="#alerts-and-action-sheets">ActionSheet</a></td>
+</tr>
+<tr>
+<td>UIStackView with horizontal axis</td>
+<td><a href="#hstack">HStack</a></td>
+</tr>
+<tr>
+<td>UIStackView with vertical axis</td>
+<td><a href="#vstack">VStack</a></td>
+</tr>
+<tr>
+<td>UISegmentedControl</td>
+<td><a href="#segmented-control">SegmentedControl</a></td>
+</tr>
+<tr>
+<td>UIStepper</td>
+<td><a href="#stepper">Stepper</a></td>
+</tr>
+<tr>
+<td>UIDatePicker</td>
+<td><a href="#date-picker">DatePicker</a></td>
+</tr>
+<tr>
+<td>NSAttributedString</td>
+<td>No equivalent (use <a href="#text">Text</a>)</td>
+</tr>
+</tbody>
+<tbody></tbody>
+</table>
+<h1 id="View" data-line="72">View</h1>
+<h3 id="Text" data-line="74">Text</h3>
+<p data-line="76">To show a <strong>text</strong> in UI simply write:</p>
+<pre class="code CodeMirror" data-line="77">
+        <span class="filename"></span>
+        <span class="lineNumber CodeMirror-gutters"><span class="CodeMirror-linenumber">1</span></span>
+        <code class="swift">Text(&quot;Hello World&quot;)
+</code>
+      </pre><details><summary>Screenshot</summary>
+<p>
+</p></details><p data-line="84"><img src="file:////Users/dy/Boostnote/attachments/58f1ea1f-759b-4271-86c6-f10be9c2538e/c7c7a1d5.png" alt="" /></p>
+<p></p>
+
+<p data-line="89">To add style</p>
+<pre class="code CodeMirror" data-line="91">
+        <span class="filename"></span>
+        <span class="lineNumber CodeMirror-gutters"><span class="CodeMirror-linenumber">1</span><span class="CodeMirror-linenumber">2</span><span class="CodeMirror-linenumber">3</span><span class="CodeMirror-linenumber">4</span><span class="CodeMirror-linenumber">5</span><span class="CodeMirror-linenumber">6</span></span>
+        <code class="swift">Text(&quot;Hello World&quot;)
+    .font(.largeTitle)
+    .foregroundColor(Color.green)
+    .lineSpacing(50)
+    .lineLimit(nil)
+    .padding()
+</code>
+      </pre><details><summary>Screenshot</summary>
+<p>
+</p></details><p data-line="103"><img src="file:////Users/dy/Boostnote/attachments/58f1ea1f-759b-4271-86c6-f10be9c2538e/5ff86915.png" alt="" /></p>
+<p></p>
+
+<p data-line="108">To format text inside text view</p>
+<pre class="code CodeMirror" data-line="109">
+        <span class="filename"></span>
+        <span class="lineNumber CodeMirror-gutters"><span class="CodeMirror-linenumber">1</span><span class="CodeMirror-linenumber">2</span><span class="CodeMirror-linenumber">3</span><span class="CodeMirror-linenumber">4</span><span class="CodeMirror-linenumber">5</span><span class="CodeMirror-linenumber">6</span><span class="CodeMirror-linenumber">7</span><span class="CodeMirror-linenumber">8</span><span class="CodeMirror-linenumber">9</span><span class="CodeMirror-linenumber">10</span></span>
+        <code class="swift">static let dateFormatter: DateFormatter = {
+    let formatter = DateFormatter()
+    formatter.dateStyle = .long
+    return formatter
+}()
+
+var now = Date()
+var body: some View {
+    Text(&quot;Task due date: \(now, formatter: Self.dateFormatter)&quot;)
+}
+</code>
+      </pre><details><summary>Screenshot</summary>
+<p>
+</p></details><p data-line="125"><img src="file:////Users/dy/Boostnote/attachments/58f1ea1f-759b-4271-86c6-f10be9c2538e/378b9cf6.png" alt="" /></p>
+<p></p>
+
+<h3 id="Image" data-line="130">Image</h3>
+<p data-line="131">To show image</p>
+<pre class="code CodeMirror" data-line="132">
+        <span class="filename"></span>
+        <span class="lineNumber CodeMirror-gutters"><span class="CodeMirror-linenumber">1</span></span>
+        <code class="swift">Image(&quot;hello_world&quot;) //image name is hello_world
+</code>
+      </pre><details><summary>Screenshot</summary>
+<p>
+</p></details><p data-line="139"><img src="file:////Users/dy/Boostnote/attachments/58f1ea1f-759b-4271-86c6-f10be9c2538e/04f8506d.png" alt="" /></p>
+<p></p>
+
+<p data-line="144">To use system icon</p>
+<pre class="code CodeMirror" data-line="145">
+        <span class="filename"></span>
+        <span class="lineNumber CodeMirror-gutters"><span class="CodeMirror-linenumber">1</span></span>
+        <code class="swift">Image(systemName: &quot;cloud.heavyrain.fill&quot;)
+</code>
+      </pre><details><summary>Screenshot</summary>
+<p>
+</p></details><p data-line="152"><img src="file:////Users/dy/Boostnote/attachments/58f1ea1f-759b-4271-86c6-f10be9c2538e/4aa3e9f0.png" alt="" /></p>
+<p></p>
+
+<p data-line="157">you can add style to system icon set</p>
+<pre class="code CodeMirror" data-line="158">
+        <span class="filename"></span>
+        <span class="lineNumber CodeMirror-gutters"><span class="CodeMirror-linenumber">1</span><span class="CodeMirror-linenumber">2</span><span class="CodeMirror-linenumber">3</span></span>
+        <code class="swift">Image(systemName: &quot;cloud.heavyrain.fill&quot;)
+    .foregroundColor(.red)
+    .font(.largeTitle)
+</code>
+      </pre><details><summary>Screenshot</summary>
+<p>
+</p></details><p data-line="167"><img src="file:////Users/dy/Boostnote/attachments/58f1ea1f-759b-4271-86c6-f10be9c2538e/0e6239d5.png" alt="" /></p>
+<p></p>
+
+<p data-line="172">Add style to Image</p>
+<pre class="code CodeMirror" data-line="173">
+        <span class="filename"></span>
+        <span class="lineNumber CodeMirror-gutters"><span class="CodeMirror-linenumber">1</span><span class="CodeMirror-linenumber">2</span><span class="CodeMirror-linenumber">3</span><span class="CodeMirror-linenumber">4</span></span>
+        <code class="swift">Image(&quot;hello_world&quot;)
+    .resizable() //it will sized so that it fills all the available space
+    .aspectRatio(contentMode: .fill)
+    .padding(.bottom)
+</code>
+      </pre><details><summary>Screenshot</summary>
+<p>
+</p></details><p data-line="183"><img src="file:////Users/dy/Boostnote/attachments/58f1ea1f-759b-4271-86c6-f10be9c2538e/8f86190a.png" alt="" /></p>
+<p></p>
+
+<h3 id="Shape" data-line="188">Shape</h3>
+<p data-line="190">To create Rectangle</p>
+<pre class="code CodeMirror" data-line="191">
+        <span class="filename"></span>
+        <span class="lineNumber CodeMirror-gutters"><span class="CodeMirror-linenumber">1</span><span class="CodeMirror-linenumber">2</span><span class="CodeMirror-linenumber">3</span></span>
+        <code class="swift">Rectangle()
+    .fill(Color.red)
+    .frame(width: 200, height: 200)
+</code>
+      </pre><details><summary>Screenshot</summary>
+<p>
+</p></details><p data-line="200"><img src="file:////Users/dy/Boostnote/attachments/58f1ea1f-759b-4271-86c6-f10be9c2538e/4d7c0aa5.png" alt="" /></p>
+<p></p>
+
+<p data-line="205">To create circle</p>
+<pre class="code CodeMirror" data-line="206">
+        <span class="filename"></span>
+        <span class="lineNumber CodeMirror-gutters"><span class="CodeMirror-linenumber">1</span><span class="CodeMirror-linenumber">2</span><span class="CodeMirror-linenumber">3</span></span>
+        <code class="swift">Circle()
+    .fill(Color.blue)
+    .frame(width: 50, height: 50)
+</code>
+      </pre><details><summary>Screenshot</summary>
+<p>
+</p></details><p data-line="215"><img src="file:////Users/dy/Boostnote/attachments/58f1ea1f-759b-4271-86c6-f10be9c2538e/b5c12e68.png" alt="" /></p>
+<p></p>
+
+<h1 id="Layout" data-line="220">Layout</h1>
+<h3 id="Background" data-line="222">Background</h3>
+<p data-line="223">To use image as a background</p>
+<pre class="code CodeMirror" data-line="224">
+        <span class="filename"></span>
+        <span class="lineNumber CodeMirror-gutters"><span class="CodeMirror-linenumber">1</span><span class="CodeMirror-linenumber">2</span><span class="CodeMirror-linenumber">3</span><span class="CodeMirror-linenumber">4</span><span class="CodeMirror-linenumber">5</span><span class="CodeMirror-linenumber">6</span><span class="CodeMirror-linenumber">7</span></span>
+        <code class="swift">Text(&quot;Hello World&quot;)
+    .font(.largeTitle)
+    .background(
+        Image(&quot;hello_world&quot;)
+            .resizable()
+            .frame(width: 100, height: 100)
+    )
+</code>
+      </pre><details><summary>Screenshot</summary>
+<p>
+</p></details><p data-line="237"><img src="file:////Users/dy/Boostnote/attachments/58f1ea1f-759b-4271-86c6-f10be9c2538e/27815333.png" alt="" /></p>
+<p></p>
+
+<p data-line="242">Gradient background</p>
+<pre class="code CodeMirror" data-line="243">
+        <span class="filename"></span>
+        <span class="lineNumber CodeMirror-gutters"><span class="CodeMirror-linenumber">1</span><span class="CodeMirror-linenumber">2</span><span class="CodeMirror-linenumber">3</span><span class="CodeMirror-linenumber">4</span><span class="CodeMirror-linenumber">5</span><span class="CodeMirror-linenumber">6</span><span class="CodeMirror-linenumber">7</span><span class="CodeMirror-linenumber">8</span><span class="CodeMirror-linenumber">9</span></span>
+        <code class="swift">Text(&quot;Hello World&quot;)
+    .background(
+        LinearGradient(
+            gradient: Gradient(colors: [.white, .red, .black]), 
+            startPoint: .leading, 
+            endPoint: .trailing
+        ),
+        cornerRadius: 0
+    )
+</code>
+      </pre><details><summary>Screenshot</summary>
+<p>
+</p></details><p data-line="258"><img src="file:////Users/dy/Boostnote/attachments/58f1ea1f-759b-4271-86c6-f10be9c2538e/720b70a6.png" alt="" /></p>
+<p></p>
+
+<h3 id="VStack" data-line="263">VStack</h3>
+<p data-line="264">Shows child view vertically</p>
+<pre class="code CodeMirror" data-line="265">
+        <span class="filename"></span>
+        <span class="lineNumber CodeMirror-gutters"><span class="CodeMirror-linenumber">1</span><span class="CodeMirror-linenumber">2</span><span class="CodeMirror-linenumber">3</span><span class="CodeMirror-linenumber">4</span></span>
+        <code class="swift">VStack {
+    Text(&quot;Hello&quot;)
+    Text(&quot;World&quot;)
+}
+</code>
+      </pre><details><summary>Screenshot</summary>
+<p>
+</p></details><p data-line="275"><img src="file:////Users/dy/Boostnote/attachments/58f1ea1f-759b-4271-86c6-f10be9c2538e/a7994ae6.png" alt="" /></p>
+<p></p>
+
+<p data-line="280">Styling</p>
+<pre class="code CodeMirror" data-line="281">
+        <span class="filename"></span>
+        <span class="lineNumber CodeMirror-gutters"><span class="CodeMirror-linenumber">1</span><span class="CodeMirror-linenumber">2</span><span class="CodeMirror-linenumber">3</span><span class="CodeMirror-linenumber">4</span><span class="CodeMirror-linenumber">5</span></span>
+        <code class="swift">VStack(alignment: .leading, spacing: 20) {
+    Text(&quot;Hello&quot;)
+    Divider()
+    Text(&quot;World&quot;)
+}
+</code>
+      </pre><details><summary>Screenshot</summary>
+<p>
+</p></details><p data-line="292"><img src="file:////Users/dy/Boostnote/attachments/58f1ea1f-759b-4271-86c6-f10be9c2538e/7090d35f.png" alt="" /></p>
+<p></p>
+
+<h3 id="HStack" data-line="297">HStack</h3>
+<p data-line="298">Shows child view horizontally</p>
+<pre class="code CodeMirror" data-line="299">
+        <span class="filename"></span>
+        <span class="lineNumber CodeMirror-gutters"><span class="CodeMirror-linenumber">1</span><span class="CodeMirror-linenumber">2</span><span class="CodeMirror-linenumber">3</span><span class="CodeMirror-linenumber">4</span></span>
+        <code class="swift">HStack {
+    Text(&quot;Hello&quot;)
+    Text(&quot;World&quot;)
+}
+</code>
+      </pre><details><summary>Screenshot</summary>
+<p>
+</p></details><p data-line="309"><img src="file:////Users/dy/Boostnote/attachments/58f1ea1f-759b-4271-86c6-f10be9c2538e/f981fba6.png" alt="" /></p>
+<p></p>
+
+<h3 id="ZStack" data-line="314">ZStack</h3>
+<p data-line="316">To create overlapping content use ZStack</p>
+<pre class="code CodeMirror" data-line="317">
+        <span class="filename"></span>
+        <span class="lineNumber CodeMirror-gutters"><span class="CodeMirror-linenumber">1</span><span class="CodeMirror-linenumber">2</span><span class="CodeMirror-linenumber">3</span><span class="CodeMirror-linenumber">4</span><span class="CodeMirror-linenumber">5</span><span class="CodeMirror-linenumber">6</span><span class="CodeMirror-linenumber">7</span></span>
+        <code class="swift">ZStack() {
+    Image(&quot;hello_world&quot;)
+    Text(&quot;Hello World&quot;)
+        .font(.largeTitle)
+        .background(Color.black)
+        .foregroundColor(.white)
+}
+</code>
+      </pre><details><summary>Screenshot</summary>
+<p>
+</p></details><p data-line="330"><img src="file:////Users/dy/Boostnote/attachments/58f1ea1f-759b-4271-86c6-f10be9c2538e/e0ad3504.png" alt="" /></p>
+<p></p>
+
+<h1 id="Input" data-line="335">Input</h1>
+<h3 id="Toggle" data-line="337">Toggle</h3>
+<p data-line="339">Toggle lets users move between true and false states</p>
+<pre class="code CodeMirror" data-line="340">
+        <span class="filename"></span>
+        <span class="lineNumber CodeMirror-gutters"><span class="CodeMirror-linenumber">1</span><span class="CodeMirror-linenumber">2</span><span class="CodeMirror-linenumber">3</span><span class="CodeMirror-linenumber">4</span><span class="CodeMirror-linenumber">5</span></span>
+        <code class="swift">@State var isShowing = true //state
+
+Toggle(isOn: $isShowing) {
+    Text(&quot;Hello World&quot;)
+}.padding()
+</code>
+      </pre><details><summary>Screenshot</summary>
+<p>
+</p></details><p data-line="351"><img src="file:////Users/dy/Boostnote/attachments/58f1ea1f-759b-4271-86c6-f10be9c2538e/55c6acbf.png" alt="" /></p>
+<p></p>
+
+<h3 id="Button" data-line="356">Button</h3>
+<p data-line="357">To create button</p>
+<pre class="code CodeMirror" data-line="358">
+        <span class="filename"></span>
+        <span class="lineNumber CodeMirror-gutters"><span class="CodeMirror-linenumber">1</span><span class="CodeMirror-linenumber">2</span><span class="CodeMirror-linenumber">3</span><span class="CodeMirror-linenumber">4</span><span class="CodeMirror-linenumber">5</span><span class="CodeMirror-linenumber">6</span></span>
+        <code class="swift">Button(
+    action: {
+        // do something
+    },
+    label: { Text(&quot;Click Me&quot;) }
+)
+</code>
+      </pre><details><summary>Screenshot</summary>
+<p>
+</p></details><p data-line="370"><img src="file:////Users/dy/Boostnote/attachments/58f1ea1f-759b-4271-86c6-f10be9c2538e/1ee65b6f.png" alt="" /></p>
+<p></p>
+
+<p data-line="375">To create image Button</p>
+<pre class="code CodeMirror" data-line="376">
+        <span class="filename"></span>
+        <span class="lineNumber CodeMirror-gutters"><span class="CodeMirror-linenumber">1</span><span class="CodeMirror-linenumber">2</span><span class="CodeMirror-linenumber">3</span><span class="CodeMirror-linenumber">4</span><span class="CodeMirror-linenumber">5</span><span class="CodeMirror-linenumber">6</span></span>
+        <code class="swift">Button(
+    action: {
+        // do something
+    },
+    label: { Image(&quot;hello_world&quot;) }
+)
+</code>
+      </pre><h3 id="TextField" data-line="386">TextField</h3>
+<p data-line="388">It heavily relies in state, simply create a state and pass it as it will bind to it</p>
+<pre class="code CodeMirror" data-line="389">
+        <span class="filename"></span>
+        <span class="lineNumber CodeMirror-gutters"><span class="CodeMirror-linenumber">1</span><span class="CodeMirror-linenumber">2</span><span class="CodeMirror-linenumber">3</span><span class="CodeMirror-linenumber">4</span><span class="CodeMirror-linenumber">5</span></span>
+        <code class="swift">@State var fullName: String = &quot;Joe&quot; //create State
+
+TextField($fullName) // passing it to bind
+    .textFieldStyle(.roundedBorder) // adds border
+
+</code>
+      </pre><details><summary>Screenshot</summary>
+<p>
+</p></details><p data-line="400"><img src="file:////Users/dy/Boostnote/attachments/58f1ea1f-759b-4271-86c6-f10be9c2538e/1149ec0a.png" alt="" /></p>
+<p></p>
+
+<p data-line="405">To create secure TextField</p>
+<pre class="code CodeMirror" data-line="406">
+        <span class="filename"></span>
+        <span class="lineNumber CodeMirror-gutters"><span class="CodeMirror-linenumber">1</span><span class="CodeMirror-linenumber">2</span><span class="CodeMirror-linenumber">3</span><span class="CodeMirror-linenumber">4</span><span class="CodeMirror-linenumber">5</span></span>
+        <code class="swift">@State var password: String = &quot;&quot; // create State
+
+SecureField($password) // passing it to bind
+    .textFieldStyle(.roundedBorder) // adds border
+
+</code>
+      </pre><details><summary>Screenshot</summary>
+<p>
+</p></details><p data-line="417"><img src="file:////Users/dy/Boostnote/attachments/58f1ea1f-759b-4271-86c6-f10be9c2538e/6c3dbc98.png" alt="" /></p>
+<p></p>
+
+<h3 id="Slider" data-line="422">Slider</h3>
+<pre class="code CodeMirror" data-line="424">
+        <span class="filename"></span>
+        <span class="lineNumber CodeMirror-gutters"><span class="CodeMirror-linenumber">1</span><span class="CodeMirror-linenumber">2</span><span class="CodeMirror-linenumber">3</span></span>
+        <code class="swift">@State var value: Double = 0 // create State
+    
+Slider(value: $value, from: -100, through: 100, by: 1)
+</code>
+      </pre><details><summary>Screenshot</summary>
+<p>
+</p></details><p data-line="433"><img src="file:////Users/dy/Boostnote/attachments/58f1ea1f-759b-4271-86c6-f10be9c2538e/57184302.png" alt="" /></p>
+<p></p>
+
+<h3 id="Date-Picker" data-line="438">Date Picker</h3>
+<pre class="code CodeMirror" data-line="439">
+        <span class="filename"></span>
+        <span class="lineNumber CodeMirror-gutters"><span class="CodeMirror-linenumber">1</span><span class="CodeMirror-linenumber">2</span><span class="CodeMirror-linenumber">3</span><span class="CodeMirror-linenumber">4</span><span class="CodeMirror-linenumber">5</span><span class="CodeMirror-linenumber">6</span></span>
+        <code class="swift">@State var selectedDate = Date()
+DatePicker(
+    $selectedDate,
+    maximumDate: Date(),
+    displayedComponents: .date
+)
+</code>
+      </pre><details><summary>Screenshot</summary>
+<p>
+</p></details><p data-line="451"><img src="file:////Users/dy/Boostnote/attachments/58f1ea1f-759b-4271-86c6-f10be9c2538e/e91c5b00.png" alt="" /></p>
+<p></p>
+
+<h3 id="Segmented-Control" data-line="456">Segmented Control</h3>
+<pre class="code CodeMirror" data-line="458">
+        <span class="filename"></span>
+        <span class="lineNumber CodeMirror-gutters"><span class="CodeMirror-linenumber">1</span><span class="CodeMirror-linenumber">2</span><span class="CodeMirror-linenumber">3</span><span class="CodeMirror-linenumber">4</span><span class="CodeMirror-linenumber">5</span><span class="CodeMirror-linenumber">6</span><span class="CodeMirror-linenumber">7</span><span class="CodeMirror-linenumber">8</span><span class="CodeMirror-linenumber">9</span></span>
+        <code class="swift">@State var favoriteColor = 0
+var colors = [&quot;Red&quot;, &quot;Green&quot;, &quot;Blue&quot;]
+
+SegmentedControl(selection: $favoriteColor) {
+    ForEach(0 ..&lt; colors.count) { index in
+        Text(self.colors[index])
+            .tag(index)
+    }
+}
+</code>
+      </pre><details><summary>Screenshot</summary>
+<p>
+</p></details><p data-line="473"><img src="file:////Users/dy/Boostnote/attachments/58f1ea1f-759b-4271-86c6-f10be9c2538e/45408d77.png" alt="" /></p>
+<p></p>
+
+<h3 id="Stepper" data-line="478">Stepper</h3>
+<pre class="code CodeMirror" data-line="480">
+        <span class="filename"></span>
+        <span class="lineNumber CodeMirror-gutters"><span class="CodeMirror-linenumber">1</span><span class="CodeMirror-linenumber">2</span><span class="CodeMirror-linenumber">3</span><span class="CodeMirror-linenumber">4</span><span class="CodeMirror-linenumber">5</span><span class="CodeMirror-linenumber">6</span><span class="CodeMirror-linenumber">7</span></span>
+        <code class="swift">@State var count:Int = 0
+
+Stepper(
+    onIncrement: { self.count += 1 }, 
+    onDecrement: { self.count -= 1 }, 
+    label: { Text(&quot;Count is \(count)&quot;) }
+)
+</code>
+      </pre><p data-line="490">or</p>
+<pre class="code CodeMirror" data-line="492">
+        <span class="filename"></span>
+        <span class="lineNumber CodeMirror-gutters"><span class="CodeMirror-linenumber">1</span><span class="CodeMirror-linenumber">2</span><span class="CodeMirror-linenumber">3</span><span class="CodeMirror-linenumber">4</span><span class="CodeMirror-linenumber">5</span></span>
+        <code class="swift">@State var count:Int = 0
+
+Stepper(value: $count, in: 1...10) {
+    Text(&quot;Count is \(count)&quot;)
+}
+</code>
+      </pre><h3 id="Tap" data-line="500">Tap</h3>
+<p data-line="501">For single tap</p>
+<pre class="code CodeMirror" data-line="502">
+        <span class="filename"></span>
+        <span class="lineNumber CodeMirror-gutters"><span class="CodeMirror-linenumber">1</span><span class="CodeMirror-linenumber">2</span><span class="CodeMirror-linenumber">3</span><span class="CodeMirror-linenumber">4</span></span>
+        <code class="swift">Text(&quot;Tap me!&quot;)
+    .onTapGesture {
+        print(&quot;Tapped!&quot;)
+    }
+</code>
+      </pre><p data-line="508">For double tap</p>
+<pre class="code CodeMirror" data-line="509">
+        <span class="filename"></span>
+        <span class="lineNumber CodeMirror-gutters"><span class="CodeMirror-linenumber">1</span><span class="CodeMirror-linenumber">2</span><span class="CodeMirror-linenumber">3</span><span class="CodeMirror-linenumber">4</span></span>
+        <code class="swift">Text(&quot;Tap me!&quot;)
+    .onTapGesture(count: 2) {
+        print(&quot;Tapped!&quot;)
+    }
+</code>
+      </pre><details><summary>Screenshot</summary>
+<p>
+</p></details><p data-line="519"><img src="file:////Users/dy/Boostnote/attachments/58f1ea1f-759b-4271-86c6-f10be9c2538e/148c0787.png" alt="" /></p>
+<p></p>
+
+<h3 id="Gesture" data-line="524">Gesture</h3>
+<p data-line="525">Gesture like <strong>TapGesture</strong>, <strong>LongPressGesture</strong>, <strong>DragGesture</strong></p>
+<pre class="code CodeMirror" data-line="526">
+        <span class="filename"></span>
+        <span class="lineNumber CodeMirror-gutters"><span class="CodeMirror-linenumber">1</span><span class="CodeMirror-linenumber">2</span><span class="CodeMirror-linenumber">3</span><span class="CodeMirror-linenumber">4</span><span class="CodeMirror-linenumber">5</span><span class="CodeMirror-linenumber">6</span><span class="CodeMirror-linenumber">7</span><span class="CodeMirror-linenumber">8</span><span class="CodeMirror-linenumber">9</span><span class="CodeMirror-linenumber">10</span><span class="CodeMirror-linenumber">11</span><span class="CodeMirror-linenumber">12</span><span class="CodeMirror-linenumber">13</span><span class="CodeMirror-linenumber">14</span><span class="CodeMirror-linenumber">15</span><span class="CodeMirror-linenumber">16</span><span class="CodeMirror-linenumber">17</span><span class="CodeMirror-linenumber">18</span><span class="CodeMirror-linenumber">19</span><span class="CodeMirror-linenumber">20</span><span class="CodeMirror-linenumber">21</span><span class="CodeMirror-linenumber">22</span><span class="CodeMirror-linenumber">23</span></span>
+        <code class="swift">Text(&quot;Tap&quot;)
+    .gesture(
+        TapGesture()
+            .onEnded { _ in
+                // do something
+            }
+    )
+
+Text(&quot;Drag Me&quot;)
+    .gesture(
+        DragGesture(minimumDistance: 50)
+            .onEnded { _ in
+                // do something
+            }
+    )
+
+Text(&quot;Long Press&quot;)
+    .gesture(
+        LongPressGesture(minimumDuration: 2)
+            .onEnded { _ in
+                // do something
+            }
+    )
+</code>
+      </pre><h1 id="List" data-line="552">List</h1>
+<p data-line="554">To create static scrollable <strong>List</strong></p>
+<pre class="code CodeMirror" data-line="556">
+        <span class="filename"></span>
+        <span class="lineNumber CodeMirror-gutters"><span class="CodeMirror-linenumber">1</span><span class="CodeMirror-linenumber">2</span><span class="CodeMirror-linenumber">3</span><span class="CodeMirror-linenumber">4</span><span class="CodeMirror-linenumber">5</span></span>
+        <code class="swift">List {
+    Text(&quot;Hello world&quot;)
+    Text(&quot;Hello world&quot;)
+    Text(&quot;Hello world&quot;)
+}
+</code>
+      </pre><details><summary>Screenshot</summary>
+<p>
+</p></details><p data-line="567"><img src="file:////Users/dy/Boostnote/attachments/58f1ea1f-759b-4271-86c6-f10be9c2538e/40eb9809.png" alt="" /></p>
+<p></p>
+
+<p data-line="572">To create dynamic <strong>List</strong></p>
+<pre class="code CodeMirror" data-line="573">
+        <span class="filename"></span>
+        <span class="lineNumber CodeMirror-gutters"><span class="CodeMirror-linenumber">1</span><span class="CodeMirror-linenumber">2</span><span class="CodeMirror-linenumber">3</span><span class="CodeMirror-linenumber">4</span></span>
+        <code class="swift">let names = [&quot;Thanos&quot;, &quot;Iron man&quot;, &quot;Ant man&quot;]
+List(names) { name in
+    Text(name)
+}
+</code>
+      </pre><p data-line="580">To add section</p>
+<pre class="code CodeMirror" data-line="581">
+        <span class="filename"></span>
+        <span class="lineNumber CodeMirror-gutters"><span class="CodeMirror-linenumber">1</span><span class="CodeMirror-linenumber">2</span><span class="CodeMirror-linenumber">3</span><span class="CodeMirror-linenumber">4</span><span class="CodeMirror-linenumber">5</span><span class="CodeMirror-linenumber">6</span><span class="CodeMirror-linenumber">7</span><span class="CodeMirror-linenumber">8</span><span class="CodeMirror-linenumber">9</span></span>
+        <code class="swift">List {
+    Section(header: Text(&quot;Good Hero&quot;)) {
+        Text(&quot;Thanos&quot;)
+    }
+
+    Section(header: Text(&quot;Bad Heros&quot;)) {
+        Text(&quot;Iron man&quot;)
+    }
+}
+</code>
+      </pre><details><summary>Screenshot</summary>
+<p>
+</p></details><p data-line="596"><img src="file:////Users/dy/Boostnote/attachments/58f1ea1f-759b-4271-86c6-f10be9c2538e/41a566a4.png" alt="" /></p>
+<p></p>
+
+<p data-line="601">To make it grouped add <em>.listStyle(GroupedListStyle())</em></p>
+<pre class="code CodeMirror" data-line="602">
+        <span class="filename"></span>
+        <span class="lineNumber CodeMirror-gutters"><span class="CodeMirror-linenumber">1</span><span class="CodeMirror-linenumber">2</span><span class="CodeMirror-linenumber">3</span><span class="CodeMirror-linenumber">4</span><span class="CodeMirror-linenumber">5</span><span class="CodeMirror-linenumber">6</span><span class="CodeMirror-linenumber">7</span><span class="CodeMirror-linenumber">8</span><span class="CodeMirror-linenumber">9</span></span>
+        <code class="swift">List {
+    Section(header: Text(&quot;Good Hero&quot;)) {
+        Text(&quot;Thanos&quot;)
+    }
+
+    Section(header: Text(&quot;Bad Heros&quot;)) {
+        Text(&quot;Iron man&quot;)
+    }
+}.listStyle(GroupedListStyle())
+</code>
+      </pre><details><summary>Screenshot</summary>
+<p>
+</p></details><p data-line="617"><img src="file:////Users/dy/Boostnote/attachments/58f1ea1f-759b-4271-86c6-f10be9c2538e/b4d16a49.png" alt="" /></p>
+<p></p>
+
+<p data-line="622">To add a footer to a section</p>
+<pre class="code CodeMirror" data-line="623">
+        <span class="filename"></span>
+        <span class="lineNumber CodeMirror-gutters"><span class="CodeMirror-linenumber">1</span><span class="CodeMirror-linenumber">2</span><span class="CodeMirror-linenumber">3</span><span class="CodeMirror-linenumber">4</span><span class="CodeMirror-linenumber">5</span><span class="CodeMirror-linenumber">6</span><span class="CodeMirror-linenumber">7</span><span class="CodeMirror-linenumber">8</span></span>
+        <code class="swift">List {
+    Section(header: Text(&quot;Good Heros&quot;), footer: Text(&quot;Powerful&quot;)){
+        Text(&quot;Thanos&quot;)
+    }
+    Section(header: Text(&quot;Bad Heros&quot;), footer: Text(&quot;Not as Powerful&quot;)){
+        Text(&quot;Iron Man&quot;)
+    }
+}.listStyle(GroupedListStyle())
+</code>
+      </pre><details><summary>Screenshot</summary>
+<p>
+</p></details><p data-line="637"><img src="file:////Users/dy/Boostnote/attachments/58f1ea1f-759b-4271-86c6-f10be9c2538e/5d3be42b.png" alt="" /></p>
+<p></p>
+
+<h1 id="Containers" data-line="642">Containers</h1>
+<h3 id="NavigationView" data-line="644">NavigationView</h3>
+<p data-line="646"><strong>NavigationView</strong> is more/less like <strong>UINavigationController</strong>, It handles navigation between views, shows title, places navigation bar on top.</p>
+<pre class="code CodeMirror" data-line="648">
+        <span class="filename"></span>
+        <span class="lineNumber CodeMirror-gutters"><span class="CodeMirror-linenumber">1</span><span class="CodeMirror-linenumber">2</span><span class="CodeMirror-linenumber">3</span><span class="CodeMirror-linenumber">4</span></span>
+        <code class="swift">NavigationView {
+    Text(&quot;Hello&quot;)
+        .navigationBarTitle(Text(&quot;World&quot;), displayMode: .inline)
+}
+</code>
+      </pre><details><summary>Screenshot</summary>
+<p>
+</p></details><p data-line="658"><img src="file:////Users/dy/Boostnote/attachments/58f1ea1f-759b-4271-86c6-f10be9c2538e/47453c25.png" alt="" /></p>
+<p></p>
+
+<p data-line="663">For large title use <em>.large</em></p>
+<p data-line="665">Add bar items to <strong>NavigationView</strong></p>
+<pre class="code CodeMirror" data-line="666">
+        <span class="filename"></span>
+        <span class="lineNumber CodeMirror-gutters"><span class="CodeMirror-linenumber">1</span><span class="CodeMirror-linenumber">2</span><span class="CodeMirror-linenumber">3</span><span class="CodeMirror-linenumber">4</span><span class="CodeMirror-linenumber">5</span><span class="CodeMirror-linenumber">6</span><span class="CodeMirror-linenumber">7</span><span class="CodeMirror-linenumber">8</span><span class="CodeMirror-linenumber">9</span><span class="CodeMirror-linenumber">10</span><span class="CodeMirror-linenumber">11</span></span>
+        <code class="swift">NavigationView {
+    Text(&quot;Hello&quot;)
+        .navigationBarTitle(Text(&quot;World&quot;), displayMode: .inline)
+        .navigationBarItems(
+            trailing:
+                Button(
+                    action: { print(&quot;Going to Setting&quot;) },
+                    label: { Text(&quot;Setting&quot;) }
+                )
+        )
+}
+</code>
+      </pre><details><summary>Screenshot</summary>
+<p>
+</p></details><p data-line="683"><img src="file:////Users/dy/Boostnote/attachments/58f1ea1f-759b-4271-86c6-f10be9c2538e/80a97d85.png" alt="" /></p>
+<p></p>
+
+<h3 id="TabbedView" data-line="688">TabbedView</h3>
+<p data-line="690"><strong>TabbedView</strong> creates a container similar to <strong>UITabBarController</strong> with radio-style selection control which determines which <code>View</code> is presented.</p>
+<pre class="code CodeMirror" data-line="692">
+        <span class="filename"></span>
+        <span class="lineNumber CodeMirror-gutters"><span class="CodeMirror-linenumber">1</span><span class="CodeMirror-linenumber">2</span><span class="CodeMirror-linenumber">3</span><span class="CodeMirror-linenumber">4</span><span class="CodeMirror-linenumber">5</span><span class="CodeMirror-linenumber">6</span><span class="CodeMirror-linenumber">7</span><span class="CodeMirror-linenumber">8</span><span class="CodeMirror-linenumber">9</span><span class="CodeMirror-linenumber">10</span><span class="CodeMirror-linenumber">11</span><span class="CodeMirror-linenumber">12</span><span class="CodeMirror-linenumber">13</span><span class="CodeMirror-linenumber">14</span><span class="CodeMirror-linenumber">15</span><span class="CodeMirror-linenumber">16</span><span class="CodeMirror-linenumber">17</span><span class="CodeMirror-linenumber">18</span><span class="CodeMirror-linenumber">19</span></span>
+        <code class="swift">@State private var selection = 0
+
+TabbedView(selection: $selection) {
+    Text(&quot;View A&quot;)
+        .font(.title)
+        .tabItemLabel(Text(&quot;View A&quot;)
+            .font(.caption))
+        .tag(0)
+    Text(&quot;View B&quot;)
+        .font(.title)
+        .tabItemLabel(Text(&quot;View B&quot;)
+            .font(.caption))
+        .tag(1)
+    Text(&quot;View C&quot;)
+        .font(.title)
+        .tabItemLabel(Text(&quot;View C&quot;)
+            .font(.caption))
+        .tag(2)
+}
+</code>
+      </pre><details><summary>Screenshot</summary>
+<p>
+</p></details><p data-line="717"><img src="file:////Users/dy/Boostnote/attachments/58f1ea1f-759b-4271-86c6-f10be9c2538e/1b620888.png" alt="" /></p>
+<p></p>
+
+<h3 id="Group" data-line="722">Group</h3>
+<p data-line="723">Group creates several views to act as one, also to avoid Stack’s 10 View maximum limit.</p>
+<pre class="code CodeMirror" data-line="724">
+        <span class="filename"></span>
+        <span class="lineNumber CodeMirror-gutters"><span class="CodeMirror-linenumber">1</span><span class="CodeMirror-linenumber">2</span><span class="CodeMirror-linenumber">3</span><span class="CodeMirror-linenumber">4</span><span class="CodeMirror-linenumber">5</span><span class="CodeMirror-linenumber">6</span><span class="CodeMirror-linenumber">7</span><span class="CodeMirror-linenumber">8</span><span class="CodeMirror-linenumber">9</span><span class="CodeMirror-linenumber">10</span><span class="CodeMirror-linenumber">11</span></span>
+        <code class="swift">VStack {
+    Group {
+        Text(&quot;Hello&quot;)
+        Text(&quot;Hello&quot;)
+        Text(&quot;Hello&quot;)
+    }
+    Group {
+        Text(&quot;Hello&quot;)
+        Text(&quot;Hello&quot;)
+    }
+}
+</code>
+      </pre><details><summary>Screenshot</summary>
+<p>
+</p></details><p data-line="741"><img src="file:////Users/dy/Boostnote/attachments/58f1ea1f-759b-4271-86c6-f10be9c2538e/8e341e20.png" alt="" /></p>
+<p></p>
+
+<h1 id="Alerts-and-Action-Sheets" data-line="746">Alerts and Action Sheets</h1>
+<p data-line="747">To Show an Alert</p>
+<pre class="code CodeMirror" data-line="748">
+        <span class="filename"></span>
+        <span class="lineNumber CodeMirror-gutters"><span class="CodeMirror-linenumber">1</span><span class="CodeMirror-linenumber">2</span><span class="CodeMirror-linenumber">3</span><span class="CodeMirror-linenumber">4</span><span class="CodeMirror-linenumber">5</span><span class="CodeMirror-linenumber">6</span></span>
+        <code class="swift">Alert(
+    title: Text(&quot;Title&quot;), 
+    message: Text(&quot;message&quot;), 
+    dismissButton: .default(Text(&quot;Ok!&quot;))
+)
+
+</code>
+      </pre><p data-line="756">To Show Action Sheet</p>
+<pre class="code CodeMirror" data-line="757">
+        <span class="filename"></span>
+        <span class="lineNumber CodeMirror-gutters"><span class="CodeMirror-linenumber">1</span><span class="CodeMirror-linenumber">2</span><span class="CodeMirror-linenumber">3</span><span class="CodeMirror-linenumber">4</span><span class="CodeMirror-linenumber">5</span><span class="CodeMirror-linenumber">6</span><span class="CodeMirror-linenumber">7</span></span>
+        <code class="swift">ActionSheet(
+    title: Text(&quot;Title&quot;), 
+    message: Text(&quot;Message&quot;), 
+    buttons: [
+        .default(Text(&quot;Ok!&quot;), action: { print(&quot;hello&quot;) })
+    ]
+)
+</code>
+      </pre><h1 id="Navigation" data-line="767">Navigation</h1>
+<p data-line="768">Navigate via <strong>NavigationLink</strong></p>
+<pre class="code CodeMirror" data-line="769">
+        <span class="filename"></span>
+        <span class="lineNumber CodeMirror-gutters"><span class="CodeMirror-linenumber">1</span><span class="CodeMirror-linenumber">2</span><span class="CodeMirror-linenumber">3</span><span class="CodeMirror-linenumber">4</span><span class="CodeMirror-linenumber">5</span></span>
+        <code class="swift">NavigationView {
+    NavigationLink(destination: SecondView()) {
+        Text(&quot;Show&quot;)
+    }.navigationBarTitle(Text(&quot;First View&quot;))
+}
+</code>
+      </pre><details><summary>Screenshot</summary>
+<p>
+</p></details><p data-line="780"><img src="file:////Users/dy/Boostnote/attachments/58f1ea1f-759b-4271-86c6-f10be9c2538e/aa925515.png" alt="" /></p>
+<p></p>
+
+<p data-line="785">Navigate via tap on List Item</p>
+<pre class="code CodeMirror" data-line="786">
+        <span class="filename"></span>
+        <span class="lineNumber CodeMirror-gutters"><span class="CodeMirror-linenumber">1</span><span class="CodeMirror-linenumber">2</span><span class="CodeMirror-linenumber">3</span><span class="CodeMirror-linenumber">4</span><span class="CodeMirror-linenumber">5</span><span class="CodeMirror-linenumber">6</span></span>
+        <code class="swift">let names = [&quot;Thanos&quot;, &quot;Iron man&quot;, &quot;Ant man&quot;]
+List(names) { name in
+    NavigationLink(destination: HeroView(name: name)) {
+        Text(name)
+    }
+}
+</code>
+      </pre><p data-line="795">Navigate via <strong>PresentationButton</strong></p>
+<pre class="code CodeMirror" data-line="797">
+        <span class="filename"></span>
+        <span class="lineNumber CodeMirror-gutters"><span class="CodeMirror-linenumber">1</span></span>
+        <code class="swift">PresentationButton(Text(&quot;Tap&quot;), destination: HeroView())
+</code>
+      </pre><h1 id="Work-with-UIKit" data-line="801">Work with UIKit</h1>
+<h3 id="Navigate-to-ViewController" data-line="803">Navigate to ViewController</h3>
+<blockquote data-line="805">
+<p data-line="805">It’s possible to work with UIKit components from SwiftUI or call SwiftUI views as View Controllers from UIKit.</p>
+</blockquote>
+<p data-line="807">Let’s say you have a View Controller named SuperVillainViewController and want to call it from a SwiftUI view, to do that ViewController needs to implement UIViewControllerRepresentable:</p>
+<pre class="code CodeMirror" data-line="809">
+        <span class="filename"></span>
+        <span class="lineNumber CodeMirror-gutters"><span class="CodeMirror-linenumber">1</span><span class="CodeMirror-linenumber">2</span><span class="CodeMirror-linenumber">3</span><span class="CodeMirror-linenumber">4</span><span class="CodeMirror-linenumber">5</span><span class="CodeMirror-linenumber">6</span><span class="CodeMirror-linenumber">7</span><span class="CodeMirror-linenumber">8</span></span>
+        <code class="swift">struct SuperVillainViewController: UIViewControllerRepresentable {
+    var controllers: [UIViewController]
+    func makeUIViewcontroller(context: Context) -&gt; SuperVillainViewController {
+        // you could have a custom constructor here, I'm just keeping it simple
+        let vc = SuperVillainViewController()
+        return vc
+    }
+}
+</code>
+      </pre><p data-line="819">Now you can use it like</p>
+<pre class="code CodeMirror" data-line="820">
+        <span class="filename"></span>
+        <span class="lineNumber CodeMirror-gutters"><span class="CodeMirror-linenumber">1</span><span class="CodeMirror-linenumber">2</span><span class="CodeMirror-linenumber">3</span></span>
+        <code class="swift">NavigationLink(destination: SuperVillainViewController()) {
+    Text(&quot;Click&quot;)
+}
+</code>
+      </pre><h3 id="Use-UIKit-and-SwiftUI-Views-Together" data-line="825">Use UIKit and SwiftUI Views Together</h3>
+<blockquote data-line="827">
+<p data-line="827">To use UIView subclasses from within SwiftUI, you wrap the other view in a SwiftUI view that conforms to the UIViewRepresentable protocol. (<a href="https://developer.apple.com/tutorials/swiftui/creating-and-combining-views#use-uikit-and-swiftui-views-together">Reference</a>)</p>
+</blockquote>
+<p data-line="829">as example</p>
+<pre class="code CodeMirror" data-line="830">
+        <span class="filename"></span>
+        <span class="lineNumber CodeMirror-gutters"><span class="CodeMirror-linenumber">1</span><span class="CodeMirror-linenumber">2</span><span class="CodeMirror-linenumber">3</span><span class="CodeMirror-linenumber">4</span><span class="CodeMirror-linenumber">5</span><span class="CodeMirror-linenumber">6</span><span class="CodeMirror-linenumber">7</span><span class="CodeMirror-linenumber">8</span><span class="CodeMirror-linenumber">9</span><span class="CodeMirror-linenumber">10</span><span class="CodeMirror-linenumber">11</span><span class="CodeMirror-linenumber">12</span><span class="CodeMirror-linenumber">13</span><span class="CodeMirror-linenumber">14</span><span class="CodeMirror-linenumber">15</span><span class="CodeMirror-linenumber">16</span><span class="CodeMirror-linenumber">17</span><span class="CodeMirror-linenumber">18</span><span class="CodeMirror-linenumber">19</span><span class="CodeMirror-linenumber">20</span><span class="CodeMirror-linenumber">21</span><span class="CodeMirror-linenumber">22</span><span class="CodeMirror-linenumber">23</span><span class="CodeMirror-linenumber">24</span><span class="CodeMirror-linenumber">25</span></span>
+        <code class="swift">
+import SwiftUI
+import MapKit
+
+struct MapView: UIViewRepresentable {
+    func makeUIView(context: Context) -&gt; MKMapView {
+        MKMapView(frame: .zero)
+    }
+
+    func updateUIView(_ view: MKMapView, context: Context) {
+        let coordinate = CLLocationCoordinate2D(
+            latitude: 34.011286, 
+            longitude: -116.166868
+        )
+        let span = MKCoordinateSpan(latitudeDelta: 2.0, longitudeDelta: 2.0)
+        let region = MKCoordinateRegion(center: coordinate, span: span)
+        view.setRegion(region, animated: true)
+    }
+}
+
+struct MapView_Preview: PreviewProvider {
+    static var previews: some View {
+        MapView()
+    }
+}
+</code>
+      </pre></body>
+            </html>
